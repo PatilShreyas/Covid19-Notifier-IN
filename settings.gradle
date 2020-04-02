@@ -1,0 +1,2 @@
+rootProject.name='Covid19Notify'
+include ':app'

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Covid19 India</string>
+    <string name="confirmed">Confirmed</string>
+    <string name="active">Active</string>
+    <string name="recovered">Recovered</string>
+    <string name="deaths">Deaths</string>
+
+    <string name="default_notification_channel_id">default</string>
+    <string name="notification_title">Covid19 (India)</string>
+    <string name="notification_message">Confirmed Count : %s</string>
+</resources>
