@@ -14,6 +14,10 @@
 
 **Covid19 Notifier India** is a sample Android application 📱 built to demonstrate use of *Modern Android development* tools. Dedicated to all Android Developers with ❤️. 
 
+<p align="center">
+  <img src="art/app.png" height="500"/>
+</p>
+
 ## About
 - It simply loads **Total COVID19 cases in India** from [API](https://github.com/covid19india/api). 
 - It notifies total cases of COVID19 in India after every 1 hours.
