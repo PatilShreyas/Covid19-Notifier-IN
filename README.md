@@ -14,12 +14,19 @@
 
 **Covid19 Notifier India** is a sample Android application 📱 built to demonstrate use of *Modern Android development* tools. Dedicated to all Android Developers with ❤️. 
 
+***You can Install and test latest Foodium app from below 👇***
+
+[![Covid19 App](https://img.shields.io/badge/Covid19Notifier-APK-blue.svg?style=for-the-badge&logo=android)](https://github.com/PatilShreyas/Covid19-Notifier-IN/releases)
+
+
 <img src="art/app.png" height="500"/>
 
 ## About
 - It simply loads **Total COVID19 cases in India** from [API](https://github.com/covid19india/api). 
 - It notifies total cases of COVID19 in India after every 1 hours.
 - It is offline capable (Using Cache) 😃.
+
+*It uses `PeriodicWorkManager` which is scheduled at the first run of an app. After that, `Worker` will execute after every one hour of interval and will show notification on Android's system tray.*
 
 ## Built With 🛠
 - [Kotlin](https://kotlinlang.org/) - First class and official programming language for Android development.
