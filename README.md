@@ -4,7 +4,7 @@
 
 # COVID19 Notifier - India
 
-![CI](https://github.com/PatilShreyas/Foodium/workflows/CI/badge.svg?branch=master)
+![CI](https://github.com/PatilShreyas/Covid19-Notifier-IN/workflows/CI/badge.svg?branch=master)
 [![GitHub license](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Github Followers](https://img.shields.io/github/followers/PatilShreyas?label=Follow&style=social)
 ![GitHub stars](https://img.shields.io/github/stars/PatilShreyas/Covid19-Notifier-IN?style=social)
