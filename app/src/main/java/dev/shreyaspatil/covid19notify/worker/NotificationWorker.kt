@@ -1,5 +1,6 @@
 package dev.shreyaspatil.covid19notify.worker
 
+import android.annotation.SuppressLint
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
@@ -13,14 +14,16 @@ import androidx.core.content.ContextCompat
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
 import dev.shreyaspatil.covid19notify.R
+import dev.shreyaspatil.covid19notify.model.ApiResponse
 import dev.shreyaspatil.covid19notify.repository.CovidIndiaRepository
 import dev.shreyaspatil.covid19notify.ui.main.MainActivity
 import dev.shreyaspatil.covid19notify.utils.State
-import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.InternalCoroutinesApi
-import kotlinx.coroutines.flow.collect
+import dev.shreyaspatil.covid19notify.utils.getPeriod
+import kotlinx.coroutines.*
+import kotlinx.coroutines.flow.toList
 import org.koin.core.KoinComponent
 import org.koin.core.get
+import java.text.SimpleDateFormat
 
 @ExperimentalCoroutinesApi
 @InternalCoroutinesApi
@@ -29,7 +32,8 @@ class NotificationWorker(
     params: WorkerParameters
 ) : CoroutineWorker(context, params), KoinComponent {
 
-    private fun showNotification(totalCount: String) {
+    @SuppressLint("StringFormatInvalid")
+    private fun showNotification(totalCount: String, time: String) {
         val intent = Intent(context, MainActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         val pendingIntent = PendingIntent.getActivity(
@@ -38,12 +42,13 @@ class NotificationWorker(
         )
 
         val channelId = context.getString(R.string.default_notification_channel_id)
+        val channelName = context.getString(R.string.default_notification_channel_name)
         val defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
         val notificationBuilder = NotificationCompat.Builder(context, channelId)
-            .setColor(ContextCompat.getColor(context, android.R.color.holo_red_dark))
+            .setColor(ContextCompat.getColor(context, R.color.dark_red))
             .setSmallIcon(R.drawable.ic_stat_notification_icon)
-            .setContentTitle(context.getString(R.string.notification_title))
-            .setContentText(context.getString(R.string.notification_message, totalCount))
+            .setContentTitle(context.getString(R.string.notification_title, totalCount))
+            .setContentText(context.getString(R.string.notification_message, time))
             .setAutoCancel(true)
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setSound(defaultSoundUri)
@@ -56,7 +61,7 @@ class NotificationWorker(
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel = NotificationChannel(
                 channelId,
-                "Default Channel",
+                channelName,
                 NotificationManager.IMPORTANCE_HIGH
             )
             notificationManager.createNotificationChannel(channel)
@@ -65,18 +70,32 @@ class NotificationWorker(
         notificationManager.notify(0, notificationBuilder.build())
     }
 
-    override suspend fun doWork(): Result {
+    override suspend fun doWork(): Result = coroutineScope {
         Log.d(javaClass.simpleName, "Worker Started!")
 
         val repository: CovidIndiaRepository = get()
 
-        repository.getData().collect { state ->
-            if (state is State.Success) {
-                showNotification(state.data.stateWiseDetails[0].confirmed)
-                Log.d(javaClass.simpleName, "Notification Showed!")
-            }
-        }
+        val result = withContext(Dispatchers.Default) {
+            repository.getData().toList()
+        }.filterIsInstance<State.Success<ApiResponse>>()
 
-        return Result.success()
+        if (result.isNullOrEmpty()) {
+            Log.d(javaClass.simpleName, "Work Failed. Retrying...")
+            Result.retry()
+        } else {
+            val totalDetails = result[0].data.stateWiseDetails[0]
+
+            showNotification(
+                totalDetails.confirmed,
+                getPeriod(
+                    SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
+                        .parse(totalDetails.lastUpdatedTime)
+                )
+            )
+            Log.d(javaClass.simpleName, "Notification Displayed!")
+            Log.d(javaClass.simpleName, "Work Succeed...")
+
+            Result.success()
+        }
     }
 }
