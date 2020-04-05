@@ -10,7 +10,6 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="@dimen/dimen_4"
         tools:context=".ui.main.MainActivity">
 
         <androidx.recyclerview.widget.RecyclerView
