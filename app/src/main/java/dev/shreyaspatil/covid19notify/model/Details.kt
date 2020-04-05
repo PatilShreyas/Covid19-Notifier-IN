@@ -2,7 +2,7 @@ package dev.shreyaspatil.covid19notify.model
 
 import com.squareup.moshi.Json
 
-data class TotalDetails(
+data class Details(
     val active: String = "0",
     val confirmed: String = "0",
     val deaths: String = "0",

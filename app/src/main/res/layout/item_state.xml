@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dimen_4"
+    android:background="@drawable/ic_line"
+    android:padding="@dimen/dimen_8">
+
+    <TextView
+        android:id="@+id/textState"
+        style="@style/TextStateName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Maharashtra" />
+
+    <TextView
+        android:id="@+id/textLastUpdatedView"
+        style="@style/TextLastUpdatedTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_4"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textState"
+        tools:text="Last Updated: 1 minutes ago" />
+
+    <LinearLayout
+        android:id="@+id/confirmedLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/activeLayout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textLastUpdatedView">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_virus"
+            android:tint="@color/dark_red" />
+
+        <TextView
+            android:id="@+id/textConfirmed"
+            style="@style/TextCountSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_red"
+            tools:text="1138" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/recoveredLayout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/confirmedLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textLastUpdatedView">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_patient"
+            android:tint="@color/dark_blue" />
+
+        <TextView
+            android:id="@+id/textActive"
+            style="@style/TextCountSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_blue"
+            tools:text="1138" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/recoveredLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/deathLayout"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/activeLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textLastUpdatedView">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_heart"
+            android:tint="@color/dark_green" />
+
+        <TextView
+            android:id="@+id/textRecovered"
+            style="@style/TextCountSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_green"
+            tools:text="1138" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/deathLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/recoveredLayout"
+        app:layout_constraintTop_toBottomOf="@+id/textLastUpdatedView">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_death"
+            android:tint="@color/dark_yellow" />
+
+        <TextView
+            android:id="@+id/textDeath"
+            style="@style/TextCountSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_yellow"
+            tools:text="1138" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

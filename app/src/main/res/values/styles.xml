@@ -19,6 +19,20 @@
         <item name="android:textColor">@android:color/white</item>
     </style>
 
+    <style name="TextStateName">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Body1
+        </item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="TextLastUpdatedTime">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Overline
+        </item>
+    </style>
+
     <style name="ImageIcon">
         <item name="android:layout_gravity">center</item>
         <item name="android:tint">@android:color/white</item>
@@ -30,6 +44,14 @@
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textStyle">bold</item>
         <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="TextCountSmall">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle2
+        </item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">4dp</item>
     </style>
 
     <style name="LayoutStyle">
