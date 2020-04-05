@@ -2,7 +2,7 @@
   <img src="art/icon.png" height="200"/>
 </p>
 
-# COVID19 Notifier - India
+# COVID19 Notifier - India 🇮🇳
 
 ![CI](https://github.com/PatilShreyas/Covid19-Notifier-IN/workflows/CI/badge.svg?branch=master)
 [![GitHub license](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
