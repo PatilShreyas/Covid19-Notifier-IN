@@ -2,7 +2,7 @@
   <img src="art/icon.png" height="200"/>
 </p>
 
-# 🔔 COVID19 Notifier - India
+# COVID19 Notifier - India
 
 ![CI](https://github.com/PatilShreyas/Foodium/workflows/CI/badge.svg?branch=master)
 [![GitHub license](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -16,10 +16,20 @@
 
 ***You can Install and test latest Foodium app from below 👇***
 
-[![Covid19 App](https://img.shields.io/badge/Covid19Notifier-APK-blue.svg?style=for-the-badge&logo=android)](https://github.com/PatilShreyas/Covid19-Notifier-IN/releases)
+[![Covid19 App](https://img.shields.io/badge/Covid19Notifier-APK-blue.svg?style=for-the-badge&logo=android)](https://github.com/PatilShreyas/Covid19-Notifier-IN/releases/download/v2.0/app-debug.apk)
 
-
-<img src="art/app.png" height="500"/>
+<table style="width:100%">
+  <tr>
+    <th>Main Screen (Total Report)</th>
+    <th>Main Screen (State Report List)</th>
+    <th>Notification in the System Tray</th>
+  </tr>
+  <tr>
+    <td><img src="art/home.jpg"/></td>
+    <td><img src="art/states.jpg"/></td> 
+    <td><img src="art/notification.jpg"/></td>
+  </tr>
+</table>
 
 ## About
 - It simply loads **Total COVID19 cases in India** from [API](https://github.com/covid19india/api). 
@@ -53,7 +63,7 @@
     ├── di                  # Dependency Injection     
     |
     ├── ui                  # Activity/View layer  
-    │   └── main            # Main Screen Activity and ViewModel
+    │   └── main            # Main Screen Activity, ViewModel and RecyclerView Adapters.
     |
     ├── utils               # Utility Classes / Kotlin extensions
     └── worker              # Worker class.
