@@ -14,7 +14,7 @@
 
 **Covid19 Notifier India** is a sample Android application 📱 built to demonstrate use of *Modern Android development* tools. Dedicated to all Android Developers with ❤️. 
 
-***You can Install and test latest Foodium app from below 👇***
+***You can Install and test latest Covid19 Notifier app from below 👇***
 
 [![Covid19 App](https://img.shields.io/badge/Covid19Notifier-APK-blue.svg?style=for-the-badge&logo=android)](https://github.com/PatilShreyas/Covid19-Notifier-IN/releases/download/v2.0/app-debug.apk)
 
