@@ -43,7 +43,7 @@ class StateAdapter : ListAdapter<Details, StateAdapter.StateViewHolder>(DIFF_CAL
             binding.textRecovered.text = details.recovered
             binding.textDeath.text = details.deaths
 
-            //New Confirmed
+            // New Confirmed
             details.deltaConfirmed.let {
                 if (it == "0") {
                     binding.groupStateNewConfirm.visibility = View.GONE
@@ -52,7 +52,8 @@ class StateAdapter : ListAdapter<Details, StateAdapter.StateViewHolder>(DIFF_CAL
                     binding.textStateNewConfirm.text = details.deltaConfirmed
                 }
             }
-            //New Recovered
+
+            // New Recovered
             details.deltaRecovered.let {
                 if (it == "0") {
                     binding.groupStateNewRecover.visibility = View.GONE
@@ -61,7 +62,8 @@ class StateAdapter : ListAdapter<Details, StateAdapter.StateViewHolder>(DIFF_CAL
                     binding.textStateNewRecover.text = details.deltaRecovered
                 }
             }
-            //New Deaths
+
+            // New Deaths
             details.deltaDeaths.let {
                 if (it == "0") {
                     binding.groupStateNewDeaths.visibility = View.GONE

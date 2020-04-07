@@ -42,7 +42,7 @@ class TotalAdapter : ListAdapter<Details, TotalAdapter.TotalViewHolder>(DIFF_CAL
             binding.textRecovered.text = details.recovered
             binding.textDeceased.text = details.deaths
 
-            //New Confirmed
+            // New Confirmed
             details.deltaConfirmed.let {
                 if (it == "0") {
                     binding.groupNewConfirmed.visibility = View.GONE
@@ -51,7 +51,8 @@ class TotalAdapter : ListAdapter<Details, TotalAdapter.TotalViewHolder>(DIFF_CAL
                     binding.textNewConfirmed.text = details.deltaConfirmed
                 }
             }
-            //New Recovered
+
+            // New Recovered
             details.deltaRecovered.let {
                 if (it == "0") {
                     binding.groupNewRecovered.visibility = View.GONE
@@ -60,7 +61,8 @@ class TotalAdapter : ListAdapter<Details, TotalAdapter.TotalViewHolder>(DIFF_CAL
                     binding.textNewRecovered.text = details.deltaRecovered
                 }
             }
-            //New Deaths
+
+            // New Deaths
             details.deltaDeaths.let {
                 if (it == "0") {
                     binding.groupNewDeaths.visibility = View.GONE
