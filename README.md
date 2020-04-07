@@ -25,8 +25,8 @@
     <th>Notification in the System Tray</th>
   </tr>
   <tr>
-    <td><img src="art/home.png"/></td>
-    <td><img src="art/states.png"/></td> 
+    <td><img src="art/home.jpg"/></td>
+    <td><img src="art/states.jpg"/></td> 
     <td><img src="art/notification.jpg"/></td>
   </tr>
 </table>
