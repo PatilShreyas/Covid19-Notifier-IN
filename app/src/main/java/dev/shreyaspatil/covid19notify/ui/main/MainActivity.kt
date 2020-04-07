@@ -34,6 +34,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Init Toolbar
+        setSupportActionBar(binding.toolbar)
+
+        // Set adapter to the RecyclerView
         binding.recycler.adapter = adapter
 
         initData()

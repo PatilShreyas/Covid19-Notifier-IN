@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -12,11 +12,24 @@
         <item name="fontFamily">@font/google_sans</item>
     </style>
 
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="fontFamily">@font/google_sans</item>
+    </style>
+
     <style name="TextTitle">
         <item name="android:layout_gravity">center</item>
         <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline6
         </item>
         <item name="android:textColor">@android:color/white</item>
+    </style>
+    <style name="TextTitleBlack">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline6
+        </item>
+        <item name="android:textColor">@android:color/black</item>
     </style>
 
     <style name="TextStateName">
@@ -61,4 +74,7 @@
         <item name="android:layout_margin">4dp</item>
     </style>
 
+    <style name="TextCountDelta">
+        <item name="android:textSize">12sp</item>
+    </style>
 </resources>
