@@ -42,27 +42,29 @@ class TotalAdapter : ListAdapter<Details, TotalAdapter.TotalViewHolder>(DIFF_CAL
             binding.textRecovered.text = details.recovered
             binding.textDeceased.text = details.deaths
 
-            //New Confirmed
+            // New Confirmed
             details.deltaConfirmed.let {
-                if (it.contains("0")) {
+                if (it == "0") {
                     binding.groupNewConfirmed.visibility = View.GONE
                 } else {
                     binding.groupNewConfirmed.visibility = View.VISIBLE
                     binding.textNewConfirmed.text = details.deltaConfirmed
                 }
             }
-            //New Recovered
+
+            // New Recovered
             details.deltaRecovered.let {
-                if (it.contains("0")) {
+                if (it == "0") {
                     binding.groupNewRecovered.visibility = View.GONE
                 } else {
                     binding.groupNewRecovered.visibility = View.VISIBLE
                     binding.textNewRecovered.text = details.deltaRecovered
                 }
             }
-            //New Deaths
+
+            // New Deaths
             details.deltaDeaths.let {
-                if (it.contains("0")) {
+                if (it == "0") {
                     binding.groupNewDeaths.visibility = View.GONE
                 } else {
                     binding.groupNewDeaths.visibility = View.VISIBLE

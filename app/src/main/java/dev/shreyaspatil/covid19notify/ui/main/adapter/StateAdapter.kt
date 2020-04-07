@@ -43,27 +43,29 @@ class StateAdapter : ListAdapter<Details, StateAdapter.StateViewHolder>(DIFF_CAL
             binding.textRecovered.text = details.recovered
             binding.textDeath.text = details.deaths
 
-            //New Confirmed
+            // New Confirmed
             details.deltaConfirmed.let {
-                if (it.contains("0")) {
+                if (it == "0") {
                     binding.groupStateNewConfirm.visibility = View.GONE
                 } else {
                     binding.groupStateNewConfirm.visibility = View.VISIBLE
                     binding.textStateNewConfirm.text = details.deltaConfirmed
                 }
             }
-            //New Recovered
+
+            // New Recovered
             details.deltaRecovered.let {
-                if (it.contains("0")) {
+                if (it == "0") {
                     binding.groupStateNewRecover.visibility = View.GONE
                 } else {
                     binding.groupStateNewRecover.visibility = View.VISIBLE
                     binding.textStateNewRecover.text = details.deltaRecovered
                 }
             }
-            //New Deaths
+
+            // New Deaths
             details.deltaDeaths.let {
-                if (it.contains("0")) {
+                if (it == "0") {
                     binding.groupStateNewDeaths.visibility = View.GONE
                 } else {
                     binding.groupStateNewDeaths.visibility = View.VISIBLE
