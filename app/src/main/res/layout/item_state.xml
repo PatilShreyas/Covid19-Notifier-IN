@@ -35,14 +35,13 @@
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
         android:contentDescription="@string/confirmed"
         android:src="@drawable/ic_virus"
         android:tint="@color/dark_red"
         app:layout_constraintBottom_toBottomOf="@+id/imageView9"
         app:layout_constraintEnd_toStartOf="@+id/imageView9"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView9" />
 
@@ -60,8 +59,8 @@
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
         android:contentDescription="@string/active"
         android:src="@drawable/ic_patient"
         android:tint="@color/dark_blue"
@@ -85,8 +84,8 @@
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
         android:contentDescription="@string/recovered"
         android:src="@drawable/ic_heart"
         android:tint="@color/dark_green"
@@ -110,8 +109,8 @@
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
         android:layout_marginTop="16dp"
         android:contentDescription="@string/deaths"
         android:src="@drawable/ic_death"
@@ -135,47 +134,46 @@
 
     <ImageView
         android:id="@+id/imageView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
         android:layout_marginStart="4dp"
         android:tint="@color/dark_red"
         app:layout_constraintBottom_toBottomOf="@+id/imageView8"
         app:layout_constraintStart_toEndOf="@+id/imageView8"
         app:layout_constraintTop_toTopOf="@+id/imageView8"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_up" />
+        app:srcCompat="@drawable/ic_trending_up" />
 
     <ImageView
         android:id="@+id/imageView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
         android:layout_marginStart="4dp"
         android:tint="@color/dark_green"
         app:layout_constraintBottom_toBottomOf="@+id/imageView10"
         app:layout_constraintStart_toEndOf="@+id/imageView10"
         app:layout_constraintTop_toTopOf="@+id/imageView10"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_up" />
+        app:srcCompat="@drawable/ic_trending_up" />
 
     <ImageView
         android:id="@+id/imageView14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
         android:layout_marginStart="4dp"
         android:tint="@color/dark_yellow"
         app:layout_constraintBottom_toBottomOf="@+id/imageView11"
         app:layout_constraintStart_toEndOf="@+id/imageView11"
         app:layout_constraintTop_toTopOf="@+id/imageView11"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_up" />
+        app:srcCompat="@drawable/ic_trending_up" />
 
     <TextView
         android:id="@+id/textStateNewConfirm"
+        style="@style/TextCountDelta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/dark_red"
-        android:textSize="12sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/imageView12"
         app:layout_constraintStart_toStartOf="@+id/imageView12"
         app:layout_constraintTop_toBottomOf="@+id/imageView12"
@@ -183,11 +181,10 @@
 
     <TextView
         android:id="@+id/textStateNewRecover"
+        style="@style/TextCountDelta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/dark_green"
-        android:textSize="12sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/imageView13"
         app:layout_constraintStart_toStartOf="@+id/imageView13"
         app:layout_constraintTop_toBottomOf="@+id/imageView13"
@@ -198,11 +195,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/dark_yellow"
-        android:textSize="12sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/imageView14"
         app:layout_constraintStart_toStartOf="@+id/imageView14"
         app:layout_constraintTop_toBottomOf="@+id/imageView14"
+        style="@style/TextCountDelta"
         tools:text="1338" />
 
     <androidx.constraintlayout.widget.Group

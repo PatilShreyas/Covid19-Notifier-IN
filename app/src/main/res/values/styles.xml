@@ -12,6 +12,13 @@
         <item name="fontFamily">@font/google_sans</item>
     </style>
 
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="fontFamily">@font/google_sans</item>
+    </style>
+
     <style name="TextTitle">
         <item name="android:layout_gravity">center</item>
         <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline6
@@ -65,5 +72,9 @@
         <item name="android:padding">@dimen/dimen_16</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:layout_margin">4dp</item>
+    </style>
+
+    <style name="TextCountDelta">
+        <item name="android:textSize">12sp</item>
     </style>
 </resources>
