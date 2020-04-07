@@ -16,7 +16,7 @@
 
 ***You can Install and test latest Covid19 Notifier app from below 👇***
 
-[![Covid19 App](https://img.shields.io/badge/Covid19Notifier-APK-blue.svg?style=for-the-badge&logo=android)](https://github.com/PatilShreyas/Covid19-Notifier-IN/releases/download/v2.0/app-debug.apk)
+[![Covid19 App](https://img.shields.io/badge/Covid19Notifier-APK-blue.svg?style=for-the-badge&logo=android)](https://github.com/PatilShreyas/Covid19-Notifier-IN/releases/download/v2.1/app-debug.apk)
 
 <table style="width:100%">
   <tr>
@@ -25,8 +25,8 @@
     <th>Notification in the System Tray</th>
   </tr>
   <tr>
-    <td><img src="art/home.png"/></td>
-    <td><img src="art/states.png"/></td> 
+    <td><img src="art/home.jpg"/></td>
+    <td><img src="art/states.jpg"/></td> 
     <td><img src="art/notification.jpg"/></td>
   </tr>
 </table>
