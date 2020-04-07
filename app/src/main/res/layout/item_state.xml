@@ -206,7 +206,7 @@
         tools:text="1338" />
 
     <androidx.constraintlayout.widget.Group
-        android:id="@+id/groupStateNewConfrim"
+        android:id="@+id/groupStateNewConfirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="visible"

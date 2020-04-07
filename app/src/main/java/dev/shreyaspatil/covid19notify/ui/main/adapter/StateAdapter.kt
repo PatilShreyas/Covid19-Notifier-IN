@@ -1,6 +1,7 @@
 package dev.shreyaspatil.covid19notify.ui.main.adapter
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -41,6 +42,34 @@ class StateAdapter : ListAdapter<Details, StateAdapter.StateViewHolder>(DIFF_CAL
             binding.textActive.text = details.active
             binding.textRecovered.text = details.recovered
             binding.textDeath.text = details.deaths
+
+            //New Confirmed
+            details.deltaConfirmed.let {
+                if (it.contains("0")) {
+                    binding.groupStateNewConfirm.visibility = View.GONE
+                } else {
+                    binding.groupStateNewConfirm.visibility = View.VISIBLE
+                    binding.textStateNewConfirm.text = details.deltaConfirmed
+                }
+            }
+            //New Recovered
+            details.deltaRecovered.let {
+                if (it.contains("0")) {
+                    binding.groupStateNewRecover.visibility = View.GONE
+                } else {
+                    binding.groupStateNewRecover.visibility = View.VISIBLE
+                    binding.textStateNewRecover.text = details.deltaRecovered
+                }
+            }
+            //New Deaths
+            details.deltaDeaths.let {
+                if (it.contains("0")) {
+                    binding.groupStateNewDeaths.visibility = View.GONE
+                } else {
+                    binding.groupStateNewDeaths.visibility = View.VISIBLE
+                    binding.textStateNewDeath.text = details.deltaDeaths
+                }
+            }
         }
     }
 
