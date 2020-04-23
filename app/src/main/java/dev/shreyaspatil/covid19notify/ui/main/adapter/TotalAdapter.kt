@@ -6,11 +6,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import dev.shreyaspatil.covid19notify.R
 import dev.shreyaspatil.covid19notify.databinding.ItemTotalBinding
 import dev.shreyaspatil.covid19notify.model.Details
-import dev.shreyaspatil.covid19notify.utils.getPeriod
-import java.text.SimpleDateFormat
 
 class TotalAdapter : ListAdapter<Details, TotalAdapter.TotalViewHolder>(DIFF_CALLBACK) {
 
@@ -29,14 +26,6 @@ class TotalAdapter : ListAdapter<Details, TotalAdapter.TotalViewHolder>(DIFF_CAL
     class TotalViewHolder(private val binding: ItemTotalBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(details: Details) {
-            binding.textLastUpdatedView.text = itemView.context.getString(
-                R.string.text_last_updated,
-                getPeriod(
-                    SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
-                        .parse(details.lastUpdatedTime)
-                )
-            )
-
             binding.textConfirmed.text = details.confirmed
             binding.textActive.text = details.active
             binding.textRecovered.text = details.recovered

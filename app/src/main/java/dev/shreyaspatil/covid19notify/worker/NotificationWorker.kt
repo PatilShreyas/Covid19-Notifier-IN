@@ -14,7 +14,7 @@ import androidx.core.content.ContextCompat
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
 import dev.shreyaspatil.covid19notify.R
-import dev.shreyaspatil.covid19notify.model.ApiResponse
+import dev.shreyaspatil.covid19notify.model.StateResponse
 import dev.shreyaspatil.covid19notify.repository.CovidIndiaRepository
 import dev.shreyaspatil.covid19notify.ui.main.MainActivity
 import dev.shreyaspatil.covid19notify.utils.State
@@ -77,7 +77,7 @@ class NotificationWorker(
 
         val result = withContext(Dispatchers.Default) {
             repository.getData().toList()
-        }.filterIsInstance<State.Success<ApiResponse>>()
+        }.filterIsInstance<State.Success<StateResponse>>()
 
         if (result.isNullOrEmpty()) {
             Log.d(javaClass.simpleName, "Work Failed. Retrying...")

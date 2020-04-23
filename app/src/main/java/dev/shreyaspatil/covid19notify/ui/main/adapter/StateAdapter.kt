@@ -14,6 +14,7 @@ import java.text.SimpleDateFormat
 
 class StateAdapter : ListAdapter<Details, StateAdapter.StateViewHolder>(DIFF_CALLBACK) {
 
+    var clickListener: (stateDetails: Details) -> Unit = { }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = StateViewHolder(
         ItemStateBinding.inflate(
             LayoutInflater.from(parent.context),
@@ -26,8 +27,12 @@ class StateAdapter : ListAdapter<Details, StateAdapter.StateViewHolder>(DIFF_CAL
         holder.bind(getItem(position))
 
 
-    class StateViewHolder(private val binding: ItemStateBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+    inner class StateViewHolder(private val binding: ItemStateBinding) :
+        RecyclerView.ViewHolder(binding.root), View.OnClickListener {
+        init {
+            binding.root.setOnClickListener(this)
+        }
+
         fun bind(details: Details) {
             binding.textState.text = details.state
             binding.textLastUpdatedView.text = itemView.context.getString(
@@ -71,6 +76,15 @@ class StateAdapter : ListAdapter<Details, StateAdapter.StateViewHolder>(DIFF_CAL
                     binding.groupStateNewDeaths.visibility = View.VISIBLE
                     binding.textStateNewDeath.text = details.deltaDeaths
                 }
+            }
+        }
+
+        override fun onClick(v: View?) {
+            if (bindingAdapterPosition == RecyclerView.NO_POSITION) return
+            //Passing Details to the selected Item
+            val item = getItem(bindingAdapterPosition)
+            item.let {
+                clickListener.invoke(it)
             }
         }
     }
