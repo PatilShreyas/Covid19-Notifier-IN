@@ -1,7 +1,7 @@
 package dev.shreyaspatil.covid19notify.repository
 
 import dev.shreyaspatil.covid19notify.api.Covid19IndiaApiService
-import dev.shreyaspatil.covid19notify.model.StateDistrictResponse
+import dev.shreyaspatil.covid19notify.model.StateDistrictDetails
 import dev.shreyaspatil.covid19notify.model.StateResponse
 import dev.shreyaspatil.covid19notify.utils.State
 import kotlinx.coroutines.Dispatchers
@@ -20,9 +20,9 @@ class CovidIndiaRepository(private val apiService: Covid19IndiaApiService) {
     }
 
     //State District Data
-    fun getStateDistrictData(): Flow<State<StateDistrictResponse>> {
-        return object : NetworkBoundRepository<StateDistrictResponse>() {
-            override suspend fun fetchFromRemote(): Response<StateDistrictResponse> =
+    fun getStateDistrictData(): Flow<State<List<StateDistrictDetails>>> {
+        return object : NetworkBoundRepository<List<StateDistrictDetails>>() {
+            override suspend fun fetchFromRemote(): Response<List<StateDistrictDetails>> =
                 apiService.getStatDistrictData()
         }.asFlow().flowOn(Dispatchers.IO)
     }
