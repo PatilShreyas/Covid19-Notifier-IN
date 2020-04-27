@@ -1,7 +1,6 @@
 package dev.shreyaspatil.covid19notify.model
 
 import android.os.Parcelable
-import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 import kotlinx.android.parcel.Parcelize
 
@@ -28,11 +27,6 @@ import kotlinx.android.parcel.Parcelize
     }
     }
     ],*/
-@Parcelize
-data class StateDistrictResponse(
-    @Json(name = "o")
-    val stateDistrictResponse: List<StateDistrictDetails>
-) : Parcelable
 
 @Parcelize
 @JsonClass(generateAdapter = true)
@@ -44,14 +38,14 @@ data class StateDistrictDetails(
 @Parcelize
 @JsonClass(generateAdapter = true)
 data class DistrictData(
-    val confirmed: Int,
-    val delta: Delta,
-    val district: String,
-    val lastupdatedtime: String
+    val confirmed: Int = 0,
+    val delta: Delta ,
+    val district: String = "",
+    val lastupdatedtime: String = ""
 ) : Parcelable
 
 @Parcelize
 @JsonClass(generateAdapter = true)
 data class Delta(
-    val confirmed: Int
+    val confirmed: Int = 0
 ) : Parcelable

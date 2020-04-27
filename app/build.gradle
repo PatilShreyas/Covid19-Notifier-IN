@@ -11,8 +11,8 @@ android {
         applicationId "dev.shreyaspatil.covid19notify"
         minSdkVersion 21
         targetSdkVersion 29
-        versionCode 3
-        versionName "2.1"
+        versionCode 4
+        versionName "3.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
