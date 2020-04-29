@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+
+        <item name="fontFamily">@font/google_sans</item>
+    </style>
+    <style name="TextTitleBlack">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline6
+        </item>
+        <item name="android:textColor">?colorAccent</item>
+    </style>
+
+    <style name="ToolBarTitleBlack">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle1
+        </item>
+        <item name="android:textColor">?colorAccent</item>
+    </style>
+
+    <style name="TextStateName">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Body1
+        </item>
+        <item name="android:textColor">?colorAccent</item>
+    </style>
+
+    <style name="TextLastUpdatedTime">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">@color/colorTextLastUpdated</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Overline
+        </item>
+    </style>
+
+    <style name="ImageIcon">
+        <item name="android:layout_gravity">center</item>
+        <item name="android:tint">?colorAccent</item>
+    </style>
+
+</resources>

@@ -37,6 +37,7 @@
                         android:layout_height="wrap_content"
                         android:padding="14dp"
                         android:src="@drawable/ic_left"
+                        android:tint="?colorAccent"
                         app:layout_constraintBottom_toBottomOf="@+id/textLastUpdatedView"
                         app:layout_constraintEnd_toStartOf="@+id/toolbarTitleState"
                         app:layout_constraintStart_toStartOf="parent"

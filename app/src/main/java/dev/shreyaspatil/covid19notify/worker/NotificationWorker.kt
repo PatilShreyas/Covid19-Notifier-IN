@@ -45,7 +45,7 @@ class NotificationWorker(
         val channelName = context.getString(R.string.default_notification_channel_name)
         val defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
         val notificationBuilder = NotificationCompat.Builder(context, channelId)
-            .setColor(ContextCompat.getColor(context, R.color.dark_red))
+            .setColor(ContextCompat.getColor(context, R.color.color_confirmed))
             .setSmallIcon(R.drawable.ic_stat_notification_icon)
             .setContentTitle(context.getString(R.string.text_confirmed_cases, totalCount))
             .setContentText(context.getString(R.string.text_last_updated, time))

@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardElevation="4dp"
-    android:padding="@dimen/dimen_8"
-    app:cardBackgroundColor="@color/cream"
     android:layout_marginStart="@dimen/dimen_16"
+    android:layout_marginTop="@dimen/dimen_8"
     android:layout_marginEnd="@dimen/dimen_16"
     android:layout_marginBottom="@dimen/dimen_8"
-    android:layout_marginTop="@dimen/dimen_8"
-    app:cardCornerRadius="@dimen/dimen_16">
+    android:padding="@dimen/dimen_8"
+    app:cardBackgroundColor="@color/colorSurface"
+    app:cardCornerRadius="@dimen/dimen_16"
+    app:cardElevation="4dp">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -37,6 +37,7 @@
             style="@style/TextCountSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/colorTextDefault"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/textView5"
             app:layout_constraintEnd_toEndOf="@+id/textView5"
@@ -46,11 +47,12 @@
 
         <TextView
             android:id="@+id/textView5"
-            style="@style/TextStateName"
+            style="@style/TextAppearance.MaterialComponents.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="32dp"
             android:text="@string/confirmed"
+            android:textColor="@color/colorTextDefault"
             app:layout_constraintBottom_toBottomOf="@+id/textDistrictName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textConfirmed" />
