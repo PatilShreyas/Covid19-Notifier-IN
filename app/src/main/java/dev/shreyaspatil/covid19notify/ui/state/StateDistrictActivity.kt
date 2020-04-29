@@ -60,6 +60,10 @@ class StateDistrictActivity : AppCompatActivity() {
         binding.swipeRefreshLayout.setOnRefreshListener {
             details?.state?.let { stateViewModel.getDistrictData(it) }
         }
+
+        binding.ivGoBack.setOnClickListener{
+            onBackPressed()
+        }
     }
 
 
