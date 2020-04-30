@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.MergeAdapter
 import dev.shreyaspatil.covid19notify.R
@@ -61,7 +62,7 @@ class StateDistrictActivity : AppCompatActivity() {
             details?.state?.let { stateViewModel.getDistrictData(it) }
         }
 
-        binding.ivGoBack.setOnClickListener{
+        binding.ivGoBack.setOnClickListener {
             onBackPressed()
         }
     }
@@ -87,6 +88,19 @@ class StateDistrictActivity : AppCompatActivity() {
 
             }
         })
-
+        binding.swipeRefreshLayout.apply {
+            setProgressBackgroundColorSchemeColor(
+                ContextCompat.getColor(
+                    this@StateDistrictActivity,
+                    R.color.background
+                )
+            )
+            setColorSchemeColors(
+                ContextCompat.getColor(
+                    this@StateDistrictActivity,
+                    R.color.colorAccent
+                )
+            )
+        }
     }
 }

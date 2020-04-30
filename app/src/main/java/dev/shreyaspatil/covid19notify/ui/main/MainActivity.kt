@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.MergeAdapter
 import androidx.work.*
@@ -18,6 +19,7 @@ import dev.shreyaspatil.covid19notify.utils.getPeriod
 import dev.shreyaspatil.covid19notify.worker.NotificationWorker
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.InternalCoroutinesApi
+import org.koin.android.ext.android.bind
 import org.koin.android.viewmodel.ext.android.viewModel
 import java.text.SimpleDateFormat
 import java.util.concurrent.TimeUnit
@@ -81,7 +83,15 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         })
-
+        binding.swipeRefreshLayout.apply {
+            setProgressBackgroundColorSchemeColor(
+                ContextCompat.getColor(
+                    this@MainActivity,
+                    R.color.background
+                )
+            )
+            setColorSchemeColors(ContextCompat.getColor(this@MainActivity, R.color.colorAccent))
+        }
         loadData()
     }
 
