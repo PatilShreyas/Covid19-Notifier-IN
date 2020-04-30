@@ -34,6 +34,8 @@
 ## About
 - It simply loads **Total COVID19 cases in India** from [API](https://github.com/covid19india/api). 
 - It notifies total cases of COVID19 in India after every 1 hours.
+- It shows the total cases of the District from every State.
+- Dark mode enabled by default.
 - It is offline capable (Using Cache) 😃.
 
 *It uses `PeriodicWorkManager` which is scheduled at the first run of an app. After that, `Worker` will execute after every one hour of interval and will show notification on Android's system tray.*
@@ -81,6 +83,9 @@ If you need any help, you can connect with me.
 
 Visit:- [shreyaspatil.dev](https://shreyaspatil.dev)
 
+## Designed By :
+[Jigyasa](https://www.instagram.com/jigyasa9742/)
+[Rohan Singh](https://twitter.com/zaraki596)
 ## License
 ```
 MIT License
