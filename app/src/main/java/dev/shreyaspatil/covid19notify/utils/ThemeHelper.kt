@@ -1,5 +1,7 @@
 package dev.shreyaspatil.covid19notify.utils
 
+import android.content.Context
+import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatDelegate
 
 object ThemeHelper {
@@ -16,4 +18,8 @@ object ThemeHelper {
             default -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
         }
     }
+}
+
+fun isDarkTheme(context: Context): Boolean {
+    return context.resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK == Configuration.UI_MODE_NIGHT_YES
 }

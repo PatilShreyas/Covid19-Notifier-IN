@@ -39,7 +39,6 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         // Init Toolbar
         setSupportActionBar(binding.toolbar)
 

@@ -8,4 +8,5 @@
     <string name="text_confirmed_cases">Confirmed Cases : %s</string>
     <string name="text_last_updated">Last Updated : %s</string>
     <string name="default_notification_channel_name">Covid-19 India</string>
+    <string name="theme_pref_key">preference_key_theme</string>
 </resources>

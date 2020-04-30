@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/darkModeToggle"
+        android:checkable="true"
+        android:checked="false"
+        app:actionViewClass="android.widget.CheckBox"
+        android:titleCondensed="Night"
+        android:title="Dark Mode" />
+    <item
+        android:id="@+id/notificationToggle"
+        android:checkable="true"
+        android:checked="false"
+        android:title="Notifications" />
+</menu>
