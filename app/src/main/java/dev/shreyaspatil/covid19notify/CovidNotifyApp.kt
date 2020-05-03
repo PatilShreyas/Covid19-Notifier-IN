@@ -22,10 +22,7 @@ class CovidNotifyApp : Application() {
     private fun initTheme() {
         val preferences = PreferenceManager.getDefaultSharedPreferences(this)
         ThemeHelper.applyTheme(
-            preferences.getString(
-                getString(R.string.theme_pref_key),
-                ThemeHelper.default
-            )!!
+            preferences.getInt(getString(R.string.theme_pref_key), ThemeHelper.DEFAULT)
         )
     }
 

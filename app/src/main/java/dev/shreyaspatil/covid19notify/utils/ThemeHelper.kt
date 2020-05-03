@@ -5,17 +5,17 @@ import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatDelegate
 
 object ThemeHelper {
-    private const val lightMode = "light"
-    private const val darkMode = "dark"
-    private const val batterySaverMode = "battery"
-    const val default = "default"
+    private const val LIGHT_MODE = 0
+    private const val DARK_MODE = 1
+    private const val BATTERY_SAVER_MODE = 2
+    const val DEFAULT = 3
 
-    fun applyTheme(theme: String) {
+    fun applyTheme(theme: Int) {
         when (theme) {
-            lightMode -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-            darkMode -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-            batterySaverMode -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY)
-            default -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+            LIGHT_MODE -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            DARK_MODE -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            BATTERY_SAVER_MODE -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY)
+            DEFAULT -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
         }
     }
 }
