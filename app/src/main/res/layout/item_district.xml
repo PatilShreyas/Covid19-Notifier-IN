@@ -18,6 +18,25 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/textNotes"
+            style="@style/TextLastUpdatedTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:visibility="visible"
+            app:drawableStartCompat="@drawable/ic_info"
+            app:drawableTint="@color/colorTextLastUpdated"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textDistrictName"
+            tools:text="Last Updated: 1 minutes ago" />
+
+        <TextView
             android:id="@+id/textDistrictName"
             style="@style/TextStateName"
             android:layout_width="0dp"
@@ -108,14 +127,14 @@
             android:id="@+id/imageView11"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="8dp"
             android:contentDescription="@string/deaths"
             android:src="@drawable/ic_death"
             android:tint="@color/color_death"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/imageView10"
-            app:layout_constraintTop_toBottomOf="@+id/textDistrictName" />
+            app:layout_constraintTop_toBottomOf="@+id/textNotes" />
 
         <TextView
             android:id="@+id/textDeath"

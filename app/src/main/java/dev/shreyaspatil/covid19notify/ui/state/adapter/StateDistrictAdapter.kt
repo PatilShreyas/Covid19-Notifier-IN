@@ -60,6 +60,16 @@ class StateDistrictAdapter :
                     binding.textDistrictNewDeath.text = details.delta.deceased.toString()
                 }
             }
+            // Handling cases with notes
+            details.notes.let {
+                if (it.isBlank()) {
+                    binding.textNotes.visibility = View.GONE
+                } else {
+                    binding.textNotes.visibility = View.VISIBLE
+                    binding.textNotes.text = details.notes
+                }
+            }
+
         }
     }
 

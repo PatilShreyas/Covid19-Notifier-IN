@@ -51,6 +51,7 @@ data class DistrictData(
     val deceased: Int = 0,
     val recovered: Int = 0,
     val delta: Delta,
+    val notes : String = "",
     val district: String = ""
 ) : Parcelable
 
