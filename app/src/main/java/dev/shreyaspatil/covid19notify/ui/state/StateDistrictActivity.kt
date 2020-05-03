@@ -52,14 +52,14 @@ class StateDistrictActivity : AppCompatActivity() {
             )
         )
 
-        details?.state?.let { stateViewModel.getDistrictData(it) }
+        loadData(details)
 
         mStateTotalAdapter.submitList(detailList)
 
         initData()
 
         binding.swipeRefreshLayout.setOnRefreshListener {
-            details?.state?.let { stateViewModel.getDistrictData(it) }
+            loadData(details)
         }
 
         binding.ivGoBack.setOnClickListener {
@@ -67,6 +67,9 @@ class StateDistrictActivity : AppCompatActivity() {
         }
     }
 
+    private fun loadData(details: Details?) {
+        details?.state?.let { stateViewModel.getDistrictData(it) }
+    }
 
     private fun initData() {
         stateViewModel.stateCovidLiveData.observe(this, Observer {
