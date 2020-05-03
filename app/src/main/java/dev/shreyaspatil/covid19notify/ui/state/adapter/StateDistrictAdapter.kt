@@ -1,6 +1,7 @@
 package dev.shreyaspatil.covid19notify.ui.state.adapter
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -27,8 +28,38 @@ class StateDistrictAdapter :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(details: DistrictData) {
             binding.textDistrictName.text = details.district
-            binding.textConfirmed.text =
-                details.confirmed.toString()
+            binding.textConfirmed.text = details.confirmed.toString()
+            binding.textActive.text = details.active.toString()
+            binding.textDeath.text = details.deceased.toString()
+            binding.textRecovered.text = details.recovered.toString()
+
+            // New Confirmed
+            details.delta.confirmed.let {
+                if (it == 0) {
+                    binding.groupStateNewConfirm.visibility = View.GONE
+                } else {
+                    binding.groupStateNewConfirm.visibility = View.VISIBLE
+                    binding.textDistrictNewConfirm.text = details.delta.confirmed.toString()
+                }
+            }
+            // New Recovered
+            details.delta.recovered.let {
+                if (it == 0) {
+                    binding.groupStateNewRecover.visibility = View.GONE
+                } else {
+                    binding.groupStateNewRecover.visibility = View.VISIBLE
+                    binding.textDistrictNewRecover.text = details.delta.recovered.toString()
+                }
+            }
+            // New Deaths
+            details.delta.deceased.let {
+                if (it == 0) {
+                    binding.groupStateNewDeaths.visibility = View.GONE
+                } else {
+                    binding.groupStateNewDeaths.visibility = View.VISIBLE
+                    binding.textDistrictNewDeath.text = details.delta.deceased.toString()
+                }
+            }
         }
     }
 
