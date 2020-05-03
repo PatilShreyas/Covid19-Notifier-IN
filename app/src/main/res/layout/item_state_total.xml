@@ -44,7 +44,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="24dp"
@@ -220,7 +219,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView5"
                 tools:text="[1138]" />
 
-
             <TextView
                 android:id="@+id/textRecovered"
                 style="@style/TextCount"
@@ -290,7 +288,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-
             <ImageView
                 android:id="@+id/imageView7"
                 android:layout_width="24dp"
@@ -306,8 +303,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorTextDefault"
-                android:textStyle="bold"
                 android:textSize="12sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/imageView7"
                 app:layout_constraintStart_toStartOf="@+id/imageView7"
                 app:layout_constraintTop_toBottomOf="@+id/imageView7"

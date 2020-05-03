@@ -12,7 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appBarlayout"
             android:layout_width="match_parent"
@@ -82,8 +81,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
-
-
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerState"

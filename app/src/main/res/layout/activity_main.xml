@@ -12,7 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appBarlayout"
             android:layout_width="match_parent"
@@ -43,8 +42,8 @@
                         style="@style/TextLastUpdatedTime"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAllCaps="false"
                         android:layout_marginTop="2dp"
+                        android:textAllCaps="false"
                         tools:text="Last Updated: 1 minutes ago" />
 
                 </LinearLayout>

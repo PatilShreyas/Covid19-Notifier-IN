@@ -13,7 +13,6 @@
     app:cardCornerRadius="@dimen/dimen_16"
     app:cardElevation="4dp">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -56,7 +55,6 @@
             app:layout_constraintBottom_toBottomOf="@+id/textDistrictName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textConfirmed" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>

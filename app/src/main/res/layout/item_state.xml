@@ -13,7 +13,6 @@
     app:cardCornerRadius="@dimen/dimen_16"
     app:cardElevation="4dp">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -240,7 +239,6 @@
             app:constraint_referenced_ids="textStateNewDeath,imageView14"
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="8dp" />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
