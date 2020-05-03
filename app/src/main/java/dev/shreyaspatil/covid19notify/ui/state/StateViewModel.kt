@@ -1,7 +1,5 @@
 package dev.shreyaspatil.covid19notify.ui.state
 
-import android.util.Log
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -29,10 +27,10 @@ class StateViewModel(private val covidIndiaRepository: CovidIndiaRepository) : V
                 val result : StateDistrictDetails
                 val response = when(it){
                     is State.Success -> {
-                        val checkResponse = it.data
-                        for (statesData in checkResponse){
-                            if (statesData.state == stateName){
-                                result = statesData
+                        val statesData = it.data
+                        for (stateData in statesData){
+                            if (stateData.state == stateName){
+                                result = stateData
                                 _stateCovidLiveData.postValue(State.success(result))
                                 break
                             }
