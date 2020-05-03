@@ -24,12 +24,12 @@ class StateViewModel(private val covidIndiaRepository: CovidIndiaRepository) : V
         viewModelScope.launch {
             covidIndiaRepository.getStateDistrictData().collect {
 
-                val mStateDistrictDetails : StateDistrictDetails
-                val response = when(it){
+                val mStateDistrictDetails: StateDistrictDetails
+                when (it) {
                     is State.Success -> {
                         val statesData = it.data
-                        for (stateData in statesData){
-                            if (stateData.state == stateName){
+                        for (stateData in statesData) {
+                            if (stateData.state == stateName) {
                                 mStateDistrictDetails = stateData
                                 _stateCovidLiveData.postValue(State.success(mStateDistrictDetails))
                                 break
@@ -44,8 +44,8 @@ class StateViewModel(private val covidIndiaRepository: CovidIndiaRepository) : V
 
                     }
                 }
+            }
         }
-    }
 
-}
+    }
 }
