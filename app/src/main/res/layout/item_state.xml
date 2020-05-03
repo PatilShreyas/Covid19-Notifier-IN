@@ -48,7 +48,7 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:contentDescription="@string/confirmed"
-            android:src="@drawable/ic_virus1"
+            android:src="@drawable/ic_virus"
             android:tint="@color/color_confirmed"
             app:layout_constraintBottom_toBottomOf="@+id/imageView9"
             app:layout_constraintEnd_toStartOf="@+id/imageView9"
