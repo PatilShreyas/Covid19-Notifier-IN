@@ -1,7 +1,6 @@
 package dev.shreyaspatil.covid19notify.ui.state
 
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -38,8 +37,8 @@ class StateDistrictActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val details: Details? = intent.getParcelableExtra<Details>("StateDetails")
-        val detailtList = mutableListOf<Details>()
-        details?.let { detailtList.add(it) }
+        val detailList = mutableListOf<Details>()
+        details?.let { detailList.add(it) }
 
         binding.recyclerState.adapter = adapter
 
@@ -54,7 +53,7 @@ class StateDistrictActivity : AppCompatActivity() {
 
         details?.state?.let { stateViewModel.getDistrictData(it) }
 
-        mStateTotalAdapter.submitList(detailtList)
+        mStateTotalAdapter.submitList(detailList)
 
         initData()
 
@@ -73,7 +72,6 @@ class StateDistrictActivity : AppCompatActivity() {
             when (it) {
                 is State.Success -> {
                     val list: List<DistrictData> = it.data.districtData
-                    Log.d("SecondActivity", list.toString())
                     mStateDistrictAdapter.submitList(list)
                     binding.swipeRefreshLayout.isRefreshing = false
 

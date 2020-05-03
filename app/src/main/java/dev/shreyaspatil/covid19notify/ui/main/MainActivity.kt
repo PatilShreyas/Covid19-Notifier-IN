@@ -53,6 +53,15 @@ class MainActivity : AppCompatActivity() {
         binding.swipeRefreshLayout.setOnRefreshListener {
             loadData()
         }
+        binding.swipeRefreshLayout.apply {
+            setProgressBackgroundColorSchemeColor(
+                ContextCompat.getColor(
+                    this@MainActivity,
+                    R.color.background
+                )
+            )
+            setColorSchemeColors(ContextCompat.getColor(this@MainActivity, R.color.colorAccent))
+        }
         //Listener for the passing the data to the state activity
         mStateAdapter.clickListener = this::navigateToStateDistrictScreen
     }
@@ -83,15 +92,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         })
-        binding.swipeRefreshLayout.apply {
-            setProgressBackgroundColorSchemeColor(
-                ContextCompat.getColor(
-                    this@MainActivity,
-                    R.color.background
-                )
-            )
-            setColorSchemeColors(ContextCompat.getColor(this@MainActivity, R.color.colorAccent))
-        }
         loadData()
     }
 

@@ -12,9 +12,9 @@ import dev.shreyaspatil.covid19notify.model.Details
 import dev.shreyaspatil.covid19notify.utils.getPeriod
 import java.text.SimpleDateFormat
 
-class StateAdapter : ListAdapter<Details, StateAdapter.StateViewHolder>(DIFF_CALLBACK) {
+class StateAdapter(var clickListener: (stateDetails: Details) -> Unit = { }) :
+    ListAdapter<Details, StateAdapter.StateViewHolder>(DIFF_CALLBACK) {
 
-    var clickListener: (stateDetails: Details) -> Unit = { }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = StateViewHolder(
         ItemStateBinding.inflate(
             LayoutInflater.from(parent.context),
