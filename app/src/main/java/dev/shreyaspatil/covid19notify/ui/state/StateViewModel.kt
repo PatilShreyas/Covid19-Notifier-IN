@@ -30,11 +30,9 @@ class StateViewModel(private val covidIndiaRepository: CovidIndiaRepository) : V
                 val response = when(it){
                     is State.Success -> {
                         val checkResponse = it.data
-                        Log.d("SecondActivityViewModel", checkResponse.toString())
                         for (i in checkResponse){
                             if (i.state == stateName){
                                 result = i
-                                Log.d("SecondActivityViewModel", result.toString())
                                 _stateCovidLiveData.postValue(State.success(result))
                                 break
                             }
