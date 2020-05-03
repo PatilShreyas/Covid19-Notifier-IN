@@ -11,7 +11,7 @@ interface Covid19IndiaApiService {
     suspend fun getData(): Response<StateResponse>
 
     @GET("v2/state_district_wise.json")
-    suspend fun getStatDistrictData(): Response<List<StateDistrictDetails>>
+    suspend fun getStateDistrictData(): Response<List<StateDistrictDetails>>
 
     companion object {
         const val BASE_URL = "https://api.covid19india.org/"
