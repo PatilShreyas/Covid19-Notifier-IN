@@ -10,6 +10,7 @@ import dev.shreyaspatil.covid19notify.R
 import dev.shreyaspatil.covid19notify.databinding.ActivityStateDistrictBinding
 import dev.shreyaspatil.covid19notify.model.Details
 import dev.shreyaspatil.covid19notify.model.DistrictData
+import dev.shreyaspatil.covid19notify.ui.main.MainActivity.Companion.KEY_STATE_DETAILS
 import dev.shreyaspatil.covid19notify.ui.state.adapter.StateDistrictAdapter
 import dev.shreyaspatil.covid19notify.ui.state.adapter.StateTotalAdapter
 import dev.shreyaspatil.covid19notify.utils.State
@@ -36,7 +37,7 @@ class StateDistrictActivity : AppCompatActivity() {
         binding = ActivityStateDistrictBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val details: Details? = intent.getParcelableExtra<Details>("StateDetails")
+        val details: Details? = intent.getParcelableExtra<Details>(KEY_STATE_DETAILS)
         val detailList = mutableListOf<Details>()
         details?.let { detailList.add(it) }
 

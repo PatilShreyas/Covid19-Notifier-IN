@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun navigateToStateDistrictScreen(details: Details) {
         Intent(this, StateDistrictActivity::class.java).also {
-            it.putExtra("StateDetails", details)
+            it.putExtra(KEY_STATE_DETAILS, details)
             startActivity(it)
         }
     }
@@ -125,5 +125,6 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         const val JOB_TAG = "notificationWorkTag"
+        const val KEY_STATE_DETAILS = "StateDetails"
     }
 }
