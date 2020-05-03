@@ -30,9 +30,9 @@ class StateViewModel(private val covidIndiaRepository: CovidIndiaRepository) : V
                 val response = when(it){
                     is State.Success -> {
                         val checkResponse = it.data
-                        for (i in checkResponse){
-                            if (i.state == stateName){
-                                result = i
+                        for (statesData in checkResponse){
+                            if (statesData.state == stateName){
+                                result = statesData
                                 _stateCovidLiveData.postValue(State.success(result))
                                 break
                             }
