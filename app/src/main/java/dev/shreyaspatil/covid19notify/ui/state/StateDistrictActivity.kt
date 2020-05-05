@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.MergeAdapter
+import androidx.recyclerview.widget.RecyclerView
 import dev.shreyaspatil.covid19notify.R
 import dev.shreyaspatil.covid19notify.databinding.ActivityStateDistrictBinding
 import dev.shreyaspatil.covid19notify.model.Details
@@ -37,12 +38,15 @@ class StateDistrictActivity : AppCompatActivity() {
         binding = ActivityStateDistrictBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //Getting details response from the previous activity
         val details: Details? = intent.getParcelableExtra<Details>(KEY_STATE_DETAILS)
         val detailList = mutableListOf<Details>()
         details?.let { detailList.add(it) }
 
+        //Setting up the Adapter with merge adapter
         binding.recyclerState.adapter = adapter
 
+        //Setting up the toolbar view with title and time from the above response
         binding.toolbarTitleState.text = details?.state
         binding.textLastUpdatedView.text = this.getString(
             R.string.text_last_updated,
@@ -76,7 +80,10 @@ class StateDistrictActivity : AppCompatActivity() {
             when (it) {
                 is State.Success -> {
                     val list: List<DistrictData> = it.data.districtData
-                    mStateDistrictAdapter.submitList(list)
+                    val sortedList = list.sortedByDescending {districtData ->
+                        districtData.confirmed
+                    }
+                    mStateDistrictAdapter.submitList(sortedList)
                     binding.swipeRefreshLayout.isRefreshing = false
 
                 }

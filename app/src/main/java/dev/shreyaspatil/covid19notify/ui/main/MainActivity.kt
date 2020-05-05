@@ -2,9 +2,12 @@ package dev.shreyaspatil.covid19notify.ui.main
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.DrawableCompat
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.MergeAdapter
 import androidx.work.*
@@ -13,13 +16,13 @@ import dev.shreyaspatil.covid19notify.databinding.ActivityMainBinding
 import dev.shreyaspatil.covid19notify.model.Details
 import dev.shreyaspatil.covid19notify.ui.main.adapter.StateAdapter
 import dev.shreyaspatil.covid19notify.ui.main.adapter.TotalAdapter
+import dev.shreyaspatil.covid19notify.ui.settings.SettingsActivity
 import dev.shreyaspatil.covid19notify.ui.state.StateDistrictActivity
 import dev.shreyaspatil.covid19notify.utils.State
 import dev.shreyaspatil.covid19notify.utils.getPeriod
 import dev.shreyaspatil.covid19notify.worker.NotificationWorker
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.InternalCoroutinesApi
-import org.koin.android.ext.android.bind
 import org.koin.android.viewmodel.ext.android.viewModel
 import java.text.SimpleDateFormat
 import java.util.concurrent.TimeUnit
@@ -43,7 +46,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         // Init Toolbar
         setSupportActionBar(binding.toolbar)
-
         // Set adapter to the RecyclerView
         binding.recycler.adapter = adapter
 
@@ -64,6 +66,29 @@ class MainActivity : AppCompatActivity() {
         }
         //Listener for the passing the data to the state activity
         mStateAdapter.clickListener = this::navigateToStateDistrictScreen
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.toolbar_menu, menu)
+        //Setting an Icon tint so that it can be backward compatible
+        val item = menu?.findItem(R.id.menuSettings)
+        val drawableWrap = DrawableCompat.wrap(item?.icon!!).mutate()
+        DrawableCompat.setTint(drawableWrap, ContextCompat.getColor(this, R.color.colorAccent))
+        item.icon = drawableWrap
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.menuSettings -> {
+                Intent(this, SettingsActivity::class.java).also {
+                    startActivity(it)
+                }
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+
     }
 
     private fun initData() {

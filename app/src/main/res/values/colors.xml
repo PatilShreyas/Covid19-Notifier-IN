@@ -13,6 +13,7 @@
     <color name="colorSurface">#F2EDE2</color>
     <color name="colorTextLastUpdated">#000</color>
     <color name="colorTextDefault">#000</color>
+    <color name="orange_500">#F9AA33</color>
 
 
 </resources>

@@ -13,4 +13,5 @@
     <!-- Text Colors-->
     <color name="colorTextLastUpdated">#F1E5BC</color>
     <color name="colorTextDefault">#DEFFFFFF</color>
+    <color name="orange_500">#F9AA33</color>
 </resources>
