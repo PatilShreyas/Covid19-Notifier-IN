@@ -1,4 +1,4 @@
-package dev.shreyaspatil.covid19notify.ui.main.adapter
+package dev.shreyaspatil.covid19notify.ui.state.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,13 +6,13 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import dev.shreyaspatil.covid19notify.databinding.ItemTotalBinding
+import dev.shreyaspatil.covid19notify.databinding.ItemStateTotalBinding
 import dev.shreyaspatil.covid19notify.model.Details
 
-class TotalAdapter : ListAdapter<Details, TotalAdapter.TotalViewHolder>(DIFF_CALLBACK) {
+class StateTotalAdapter : ListAdapter<Details, StateTotalAdapter.TotalViewHolder>(DIFF_CALLBACK) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = TotalViewHolder(
-        ItemTotalBinding.inflate(
+        ItemStateTotalBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
             false
@@ -23,7 +23,7 @@ class TotalAdapter : ListAdapter<Details, TotalAdapter.TotalViewHolder>(DIFF_CAL
         holder.bind(getItem(position))
 
 
-    class TotalViewHolder(private val binding: ItemTotalBinding) :
+    class TotalViewHolder(private val binding: ItemStateTotalBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(details: Details) {
             binding.textConfirmed.text = details.confirmed

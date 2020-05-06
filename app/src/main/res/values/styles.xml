@@ -1,11 +1,13 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="android:colorBackground">@color/background</item>
         <item name="android:statusBarColor">@color/colorPrimary</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
 
@@ -15,7 +17,6 @@
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-
         <item name="fontFamily">@font/google_sans</item>
     </style>
 
@@ -23,11 +24,16 @@
         <item name="android:layout_gravity">center</item>
         <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline6
         </item>
-        <item name="android:textColor">@android:color/white</item>
     </style>
+
     <style name="TextTitleBlack">
-        <item name="android:layout_gravity">center</item>
         <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline6
+        </item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="ToolBarTitleBlack">
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle1
         </item>
         <item name="android:textColor">@android:color/black</item>
     </style>
@@ -42,17 +48,18 @@
     <style name="TextLastUpdatedTime">
         <item name="android:layout_gravity">center</item>
         <item name="android:textStyle">italic</item>
+        <item name="android:textColor">@color/colorTextLastUpdated</item>
         <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Overline
         </item>
     </style>
 
     <style name="ImageIcon">
         <item name="android:layout_gravity">center</item>
-        <item name="android:tint">@android:color/white</item>
+        <item name="android:tint">?colorAccent</item>
     </style>
 
     <style name="TextCount">
-        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline3
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Headline5
         </item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textStyle">bold</item>
@@ -75,6 +82,7 @@
     </style>
 
     <style name="TextCountDelta">
-        <item name="android:textSize">12sp</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Overline</item>
+        <item name="android:textStyle">bold</item>
     </style>
 </resources>
