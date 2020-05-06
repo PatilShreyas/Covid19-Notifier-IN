@@ -3,12 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/pref_height_half"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/pref_height"
-        android:text="@string/pref_title_theme_mode"
+        android:text="@string/pref_title_about"
         android:textAppearance="?attr/textAppearanceSubtitle2"
         android:textColor="@color/colorAccent"
         android:textStyle="bold"

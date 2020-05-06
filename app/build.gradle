@@ -15,6 +15,7 @@ android {
         versionName "3.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        resValue("string", "app_version", "${versionName} (build $versionCode)")
     }
 
     viewBinding {

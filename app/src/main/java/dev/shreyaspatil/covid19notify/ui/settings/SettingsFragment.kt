@@ -13,7 +13,7 @@ class SettingsFragment : PreferenceFragmentCompat() {
 
 
     override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
-        setPreferencesFromResource(R.xml.dark_theme_preference, rootKey)
+        setPreferencesFromResource(R.xml.preferences, rootKey)
     }
 
     override fun onPreferenceTreeClick(preference: Preference?): Boolean {

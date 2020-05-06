@@ -10,7 +10,7 @@
         android:layout_marginStart="@dimen/pref_image_margin"
         android:padding="@dimen/pref_image_padding"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:srcCompat="@drawable/ic_theme" />
+        app:srcCompat="@drawable/ic_version"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/pref_height"
-        android:text="@string/pref_title_theme_mode"
+        android:text="@string/pref_title_version"
         android:textAppearance="?attr/textAppearanceBody1"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/guideline"
@@ -35,7 +35,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/pref_height"
-        android:text="@string/pref_subtitle_theme_mode"
+        android:text="@string/pref_subtitle_version"
         android:textAppearance="?attr/textAppearanceBody2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline" />
