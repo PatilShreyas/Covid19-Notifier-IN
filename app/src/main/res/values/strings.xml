@@ -8,7 +8,7 @@
     <string name="text_confirmed_cases">Confirmed Cases : %s</string>
     <string name="text_last_updated">Last Updated : %s</string>
     <string name="default_notification_channel_name">Covid-19 India</string>
-
+  
     <!--Preferences Key-->
     <string name="theme_pref_key">themePref</string>
 

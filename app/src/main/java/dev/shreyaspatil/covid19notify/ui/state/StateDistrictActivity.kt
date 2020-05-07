@@ -79,7 +79,9 @@ class StateDistrictActivity : AppCompatActivity() {
             when (it) {
                 is State.Success -> {
                     val list: List<DistrictData> = it.data.districtData
+
                     val sortedList = list.sortedByDescending { districtData ->
+
                         districtData.confirmed
                     }
                     mStateDistrictAdapter.submitList(sortedList)
