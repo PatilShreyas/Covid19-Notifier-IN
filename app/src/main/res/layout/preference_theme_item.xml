@@ -2,11 +2,12 @@
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:ellipsize="end"
     android:maxLines="1"
     android:paddingStart="@dimen/pref_height_half"
     android:paddingTop="24dp"
     android:paddingEnd="@dimen/pref_image_margin"
     android:paddingBottom="24dp"
-    android:text="key_theme"
-    android:textAppearance="?attr/textAppearanceOverline" />
+    tools:text="key_theme"
+    android:textAppearance="?attr/textAppearanceSubtitle2" />

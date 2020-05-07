@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.MergeAdapter
-import androidx.recyclerview.widget.RecyclerView
 import dev.shreyaspatil.covid19notify.R
 import dev.shreyaspatil.covid19notify.databinding.ActivityStateDistrictBinding
 import dev.shreyaspatil.covid19notify.model.Details
@@ -80,7 +79,7 @@ class StateDistrictActivity : AppCompatActivity() {
             when (it) {
                 is State.Success -> {
                     val list: List<DistrictData> = it.data.districtData
-                    val sortedList = list.sortedByDescending {districtData ->
+                    val sortedList = list.sortedByDescending { districtData ->
                         districtData.confirmed
                     }
                     mStateDistrictAdapter.submitList(sortedList)
