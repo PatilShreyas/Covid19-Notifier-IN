@@ -2,13 +2,8 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/menuSettings"
-        android:icon="@drawable/ic_settings"
+        android:id="@+id/menu_uimode"
+        android:icon="@drawable/ic_lightbulb"
         app:showAsAction="always"
-        android:title="Settings" />
-    <!--<item
-        android:id="@+id/notificationToggle"
-        android:checkable="true"
-        android:checked="false"
-        android:title="Notifications" />-->
+        android:title="@string/menu_ui_mode" />
 </menu>

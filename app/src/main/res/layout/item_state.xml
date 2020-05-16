@@ -11,7 +11,7 @@
     android:padding="@dimen/dimen_8"
     app:cardBackgroundColor="@color/colorSurface"
     app:cardCornerRadius="@dimen/dimen_16"
-    app:cardElevation="4dp">
+    app:cardElevation="@dimen/dimen_4">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
             style="@style/TextStateName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="@dimen/dimen_4"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -35,7 +35,7 @@
             style="@style/TextLastUpdatedTime"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="2dp"
+            android:layout_marginTop="@dimen/dimen_4"
             android:textAlignment="center"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
@@ -45,8 +45,8 @@
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="@dimen/dimen_24"
+            android:layout_height="@dimen/dimen_24"
             android:contentDescription="@string/confirmed"
             android:src="@drawable/ic_virus"
             android:tint="@color/color_confirmed"
@@ -69,8 +69,8 @@
 
         <ImageView
             android:id="@+id/imageView9"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="@dimen/dimen_24"
+            android:layout_height="@dimen/dimen_24"
             android:contentDescription="@string/active"
             android:src="@drawable/ic_patient"
             android:tint="@color/color_active"
@@ -94,8 +94,8 @@
 
         <ImageView
             android:id="@+id/imageView10"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="@dimen/dimen_24"
+            android:layout_height="@dimen/dimen_24"
             android:contentDescription="@string/recovered"
             android:src="@drawable/ic_heart"
             android:tint="@color/color_recovered"
@@ -119,9 +119,9 @@
 
         <ImageView
             android:id="@+id/imageView11"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginTop="8dp"
+            android:layout_width="@dimen/dimen_24"
+            android:layout_height="@dimen/dimen_24"
+            android:layout_marginTop="@dimen/dimen_8"
             android:contentDescription="@string/deaths"
             android:src="@drawable/ic_death"
             android:tint="@color/color_death"
@@ -135,7 +135,6 @@
             style="@style/TextCountSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
             android:textColor="@color/color_death"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -146,10 +145,10 @@
 
         <ImageView
             android:id="@+id/imageView12"
-            android:layout_width="18dp"
-            android:layout_height="18dp"
-            android:layout_marginStart="4dp"
-            android:tint="?colorAccent"
+            android:layout_width="@dimen/dimen_16"
+            android:layout_height="@dimen/dimen_16"
+            android:layout_marginStart="@dimen/dimen_4"
+            android:tint="@color/color_confirmed"
             app:layout_constraintBottom_toBottomOf="@+id/imageView8"
             app:layout_constraintStart_toEndOf="@+id/imageView8"
             app:layout_constraintTop_toTopOf="@+id/imageView8"
@@ -158,10 +157,10 @@
 
         <ImageView
             android:id="@+id/imageView13"
-            android:layout_width="18dp"
-            android:layout_height="18dp"
-            android:layout_marginStart="4dp"
-            android:tint="?colorAccent"
+            android:layout_width="@dimen/dimen_16"
+            android:layout_height="@dimen/dimen_16"
+            android:layout_marginStart="@dimen/dimen_4"
+            android:tint="@color/color_recovered"
             app:layout_constraintBottom_toBottomOf="@+id/imageView10"
             app:layout_constraintStart_toEndOf="@+id/imageView10"
             app:layout_constraintTop_toTopOf="@+id/imageView10"
@@ -170,10 +169,10 @@
 
         <ImageView
             android:id="@+id/imageView14"
-            android:layout_width="18dp"
-            android:layout_height="18dp"
-            android:layout_marginStart="4dp"
-            android:tint="?colorAccent"
+            android:layout_width="@dimen/dimen_16"
+            android:layout_height="@dimen/dimen_16"
+            android:layout_marginStart="@dimen/dimen_4"
+            android:tint="@color/color_death"
             app:layout_constraintBottom_toBottomOf="@+id/imageView11"
             app:layout_constraintStart_toEndOf="@+id/imageView11"
             app:layout_constraintTop_toTopOf="@+id/imageView11"
@@ -185,7 +184,7 @@
             style="@style/TextCountDelta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorTextDefault"
+            android:textColor="@color/color_confirmed"
             app:layout_constraintEnd_toEndOf="@+id/imageView12"
             app:layout_constraintStart_toStartOf="@+id/imageView12"
             app:layout_constraintTop_toBottomOf="@+id/imageView12"
@@ -196,7 +195,7 @@
             style="@style/TextCountDelta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorTextDefault"
+            android:textColor="@color/color_recovered"
             app:layout_constraintEnd_toEndOf="@+id/imageView13"
             app:layout_constraintStart_toStartOf="@+id/imageView13"
             app:layout_constraintTop_toBottomOf="@+id/imageView13"
@@ -207,7 +206,7 @@
             style="@style/TextCountDelta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorTextDefault"
+            android:textColor="@color/color_death"
             app:layout_constraintEnd_toEndOf="@+id/imageView14"
             app:layout_constraintStart_toStartOf="@+id/imageView14"
             app:layout_constraintTop_toBottomOf="@+id/imageView14"
@@ -219,8 +218,8 @@
             android:layout_height="wrap_content"
             android:visibility="visible"
             app:constraint_referenced_ids="textStateNewConfirm,imageView12"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="8dp" />
+            tools:layout_editor_absoluteX="@dimen/dimen_84"
+            tools:layout_editor_absoluteY="@dimen/dimen_84" />
 
         <androidx.constraintlayout.widget.Group
             android:id="@+id/groupStateNewRecover"
@@ -228,8 +227,8 @@
             android:layout_height="wrap_content"
             android:visibility="visible"
             app:constraint_referenced_ids="textStateNewRecover,imageView13"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="8dp" />
+            tools:layout_editor_absoluteX="@dimen/dimen_84"
+            tools:layout_editor_absoluteY="@dimen/dimen_84" />
 
         <androidx.constraintlayout.widget.Group
             android:id="@+id/groupStateNewDeaths"
@@ -237,8 +236,8 @@
             android:layout_height="wrap_content"
             android:visibility="visible"
             app:constraint_referenced_ids="textStateNewDeath,imageView14"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="8dp" />
+            tools:layout_editor_absoluteX="@dimen/dimen_84"
+            tools:layout_editor_absoluteY="@dimen/dimen_84" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
