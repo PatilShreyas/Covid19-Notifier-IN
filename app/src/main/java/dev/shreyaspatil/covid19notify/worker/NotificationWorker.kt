@@ -19,12 +19,13 @@ import dev.shreyaspatil.covid19notify.repository.CovidIndiaRepository
 import dev.shreyaspatil.covid19notify.ui.main.MainActivity
 import dev.shreyaspatil.covid19notify.utils.State
 import dev.shreyaspatil.covid19notify.utils.getPeriod
+import dev.shreyaspatil.covid19notify.utils.toDateFormat
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.toList
 import org.koin.core.KoinComponent
 import org.koin.core.get
-import java.text.SimpleDateFormat
 
+@FlowPreview
 @ExperimentalCoroutinesApi
 @InternalCoroutinesApi
 class NotificationWorker(
@@ -88,8 +89,7 @@ class NotificationWorker(
             showNotification(
                 totalDetails.confirmed,
                 getPeriod(
-                    SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
-                        .parse(totalDetails.lastUpdatedTime)
+                    totalDetails.lastUpdatedTime.toDateFormat()
                 )
             )
             Log.d(javaClass.simpleName, "Notification Displayed!")

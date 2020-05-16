@@ -14,14 +14,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity
-            android:name=".ui.settings.SettingsActivity"
+            android:name=".ui.details.StateDetailsActivity"
+            android:parentActivityName=".ui.main.MainActivity"
             android:screenOrientation="portrait"
-            tools:ignore="LockedOrientationActivity"/>
-        <activity
-            android:name=".ui.state.StateDistrictActivity"
-            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
             tools:ignore="LockedOrientationActivity" />
+
         <activity
             android:name=".ui.main.MainActivity"
             android:screenOrientation="portrait"
