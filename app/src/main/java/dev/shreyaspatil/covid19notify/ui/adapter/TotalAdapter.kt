@@ -1,4 +1,4 @@
-package dev.shreyaspatil.covid19notify.ui.main.adapter
+package dev.shreyaspatil.covid19notify.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -11,13 +11,14 @@ import dev.shreyaspatil.covid19notify.model.Details
 
 class TotalAdapter : ListAdapter<Details, TotalAdapter.TotalViewHolder>(DIFF_CALLBACK) {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = TotalViewHolder(
-        ItemTotalBinding.inflate(
-            LayoutInflater.from(parent.context),
-            parent,
-            false
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
+        TotalViewHolder(
+            ItemTotalBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
         )
-    )
 
     override fun onBindViewHolder(holder: TotalViewHolder, position: Int) =
         holder.bind(getItem(position))

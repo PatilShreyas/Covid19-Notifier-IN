@@ -10,10 +10,10 @@ import dev.shreyaspatil.covid19notify.R
 import dev.shreyaspatil.covid19notify.databinding.ItemStateBinding
 import dev.shreyaspatil.covid19notify.model.Details
 import dev.shreyaspatil.covid19notify.utils.getPeriod
-import java.text.SimpleDateFormat
+import dev.shreyaspatil.covid19notify.utils.toDateFormat
 
-class StateAdapter(var clickListener: (stateDetails: Details) -> Unit = { }) :
-    ListAdapter<Details, StateAdapter.StateViewHolder>(DIFF_CALLBACK) {
+class ItemAdapter(val clickListener: (stateDetails: Details) -> Unit = {}) :
+    ListAdapter<Details, ItemAdapter.StateViewHolder>(DIFF_CALLBACK) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = StateViewHolder(
         ItemStateBinding.inflate(
@@ -28,18 +28,14 @@ class StateAdapter(var clickListener: (stateDetails: Details) -> Unit = { }) :
 
 
     inner class StateViewHolder(private val binding: ItemStateBinding) :
-        RecyclerView.ViewHolder(binding.root), View.OnClickListener {
-        init {
-            binding.root.setOnClickListener(this)
-        }
+        RecyclerView.ViewHolder(binding.root) {
 
         fun bind(details: Details) {
             binding.textState.text = details.state
             binding.textLastUpdatedView.text = itemView.context.getString(
                 R.string.text_last_updated,
                 getPeriod(
-                    SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
-                        .parse(details.lastUpdatedTime)
+                    details.lastUpdatedTime.toDateFormat()
                 )
             )
 
@@ -54,7 +50,7 @@ class StateAdapter(var clickListener: (stateDetails: Details) -> Unit = { }) :
                     binding.groupStateNewConfirm.visibility = View.GONE
                 } else {
                     binding.groupStateNewConfirm.visibility = View.VISIBLE
-                    binding.textStateNewConfirm.text = details.deltaConfirmed
+                    binding.textStateNewConfirm.text = it
                 }
             }
 
@@ -64,7 +60,7 @@ class StateAdapter(var clickListener: (stateDetails: Details) -> Unit = { }) :
                     binding.groupStateNewRecover.visibility = View.GONE
                 } else {
                     binding.groupStateNewRecover.visibility = View.VISIBLE
-                    binding.textStateNewRecover.text = details.deltaRecovered
+                    binding.textStateNewRecover.text = it
                 }
             }
 
@@ -74,17 +70,20 @@ class StateAdapter(var clickListener: (stateDetails: Details) -> Unit = { }) :
                     binding.groupStateNewDeaths.visibility = View.GONE
                 } else {
                     binding.groupStateNewDeaths.visibility = View.VISIBLE
-                    binding.textStateNewDeath.text = details.deltaDeaths
+                    binding.textStateNewDeath.text = it
                 }
             }
-        }
 
-        override fun onClick(v: View?) {
-            if (bindingAdapterPosition == RecyclerView.NO_POSITION) return
-            //Passing Details to the selected Item
-            val item = getItem(bindingAdapterPosition)
-            item.let {
-                clickListener.invoke(it)
+            // Set Click Listener
+            binding.root.setOnClickListener {
+                if (bindingAdapterPosition == RecyclerView.NO_POSITION) {
+                    return@setOnClickListener
+                }
+
+                val item = getItem(bindingAdapterPosition)
+                item.let {
+                    clickListener.invoke(it)
+                }
             }
         }
     }
@@ -96,7 +95,6 @@ class StateAdapter(var clickListener: (stateDetails: Details) -> Unit = { }) :
 
             override fun areContentsTheSame(oldItem: Details, newItem: Details): Boolean =
                 oldItem == newItem
-
         }
     }
 }
