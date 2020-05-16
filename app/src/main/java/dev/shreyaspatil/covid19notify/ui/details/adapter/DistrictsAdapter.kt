@@ -1,4 +1,4 @@
-package dev.shreyaspatil.covid19notify.ui.state.adapter
+package dev.shreyaspatil.covid19notify.ui.details.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -9,8 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import dev.shreyaspatil.covid19notify.databinding.ItemDistrictBinding
 import dev.shreyaspatil.covid19notify.model.DistrictData
 
-class StateDistrictAdapter :
-    ListAdapter<DistrictData, StateDistrictAdapter.TotalViewHolder>(DIFF_CALLBACK) {
+class DistrictsAdapter :
+    ListAdapter<DistrictData, DistrictsAdapter.TotalViewHolder>(DIFF_CALLBACK) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = TotalViewHolder(
         ItemDistrictBinding.inflate(
@@ -69,24 +69,16 @@ class StateDistrictAdapter :
                     binding.textNotes.text = details.notes
                 }
             }
-
         }
     }
 
     companion object {
         private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<DistrictData>() {
-            override fun areItemsTheSame(
-                oldItem: DistrictData,
-                newItem: DistrictData
-            ): Boolean =
+            override fun areItemsTheSame(oldItem: DistrictData, newItem: DistrictData): Boolean =
                 oldItem.district == newItem.district
 
-            override fun areContentsTheSame(
-                oldItem: DistrictData,
-                newItem: DistrictData
-            ): Boolean =
+            override fun areContentsTheSame(oldItem: DistrictData, newItem: DistrictData): Boolean =
                 oldItem == newItem
-
         }
     }
 }
