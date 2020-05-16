@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dimen_16"
+    android:layout_marginTop="@dimen/dimen_8"
+    android:layout_marginEnd="@dimen/dimen_16"
+    android:layout_marginBottom="@dimen/dimen_8"
+    android:padding="@dimen/dimen_8"
+    app:cardBackgroundColor="@color/colorSurface"
+    app:cardCornerRadius="@dimen/dimen_16"
+    app:cardElevation="@dimen/dimen_4">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textNotes"
+            style="@style/TextLastUpdatedTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:paddingStart="@dimen/dimen_16"
+            android:paddingEnd="@dimen/dimen_16"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            app:drawableStartCompat="@drawable/ic_info"
+            app:drawableTint="@color/colorTextLastUpdated"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textDistrictName"
+            tools:text="@tools:sample/lorem" />
+
+        <TextView
+            android:id="@+id/textDistrictName"
+            style="@style/TextStateName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_4"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Maharashtra" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="@dimen/dimen_24"
+            android:layout_height="@dimen/dimen_24"
+            android:contentDescription="@string/confirmed"
+            android:src="@drawable/ic_virus"
+            android:tint="@color/color_confirmed"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView9"
+            app:layout_constraintEnd_toStartOf="@+id/imageView9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView9" />
+
+        <TextView
+            android:id="@+id/textConfirmed"
+            style="@style/TextCountSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_confirmed"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView8"
+            app:layout_constraintStart_toStartOf="@+id/imageView8"
+            app:layout_constraintTop_toBottomOf="@+id/imageView8"
+            tools:text="1138" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="@dimen/dimen_24"
+            android:layout_height="@dimen/dimen_24"
+            android:contentDescription="@string/active"
+            android:src="@drawable/ic_patient"
+            android:tint="@color/color_active"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView10"
+            app:layout_constraintEnd_toStartOf="@+id/imageView10"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView8"
+            app:layout_constraintTop_toTopOf="@+id/imageView10" />
+
+        <TextView
+            android:id="@+id/textActive"
+            style="@style/TextCountSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_active"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView9"
+            app:layout_constraintStart_toStartOf="@+id/imageView9"
+            app:layout_constraintTop_toBottomOf="@+id/imageView9"
+            tools:text="1138" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="@dimen/dimen_24"
+            android:layout_height="@dimen/dimen_24"
+            android:contentDescription="@string/recovered"
+            android:src="@drawable/ic_heart"
+            android:tint="@color/color_recovered"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+            app:layout_constraintEnd_toStartOf="@+id/imageView11"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView9"
+            app:layout_constraintTop_toTopOf="@+id/imageView11" />
+
+        <TextView
+            android:id="@+id/textRecovered"
+            style="@style/TextCountSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_recovered"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/imageView10"
+            app:layout_constraintStart_toStartOf="@+id/imageView10"
+            app:layout_constraintTop_toBottomOf="@+id/imageView10"
+            tools:text="1138" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="@dimen/dimen_24"
+            android:layout_height="@dimen/dimen_24"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:contentDescription="@string/deaths"
+            android:src="@drawable/ic_death"
+            android:tint="@color/color_death"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView10"
+            app:layout_constraintTop_toBottomOf="@+id/textNotes" />
+
+        <TextView
+            android:id="@+id/textDeath"
+            style="@style/TextCountSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/color_death"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/imageView11"
+            app:layout_constraintStart_toStartOf="@+id/imageView11"
+            app:layout_constraintTop_toBottomOf="@+id/imageView11"
+            tools:text="1138" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="@dimen/dimen_16"
+            android:layout_height="@dimen/dimen_16"
+            android:layout_marginStart="@dimen/dimen_4"
+            android:tint="@color/color_confirmed"
+            app:layout_constraintBottom_toTopOf="@+id/textDistrictNewConfirm"
+            app:layout_constraintStart_toEndOf="@+id/imageView8"
+            app:layout_constraintTop_toTopOf="@+id/imageView8"
+            app:srcCompat="@drawable/ic_trending_up" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="@dimen/dimen_16"
+            android:layout_height="@dimen/dimen_16"
+            android:layout_marginStart="@dimen/dimen_4"
+            android:tint="@color/color_recovered"
+            app:layout_constraintBottom_toTopOf="@+id/textDistrictNewRecover"
+            app:layout_constraintStart_toEndOf="@+id/imageView10"
+            app:layout_constraintTop_toTopOf="@+id/imageView10"
+            app:srcCompat="@drawable/ic_trending_up" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="@dimen/dimen_16"
+            android:layout_height="@dimen/dimen_16"
+            android:layout_marginStart="@dimen/dimen_4"
+            android:tint="@color/color_death"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView11"
+            app:layout_constraintStart_toEndOf="@+id/imageView11"
+            app:layout_constraintTop_toTopOf="@+id/imageView11"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_trending_up" />
+
+        <TextView
+            android:id="@+id/textDistrictNewConfirm"
+            style="@style/TextCountDelta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_confirmed"
+            app:layout_constraintEnd_toEndOf="@+id/imageView12"
+            app:layout_constraintStart_toStartOf="@+id/imageView12"
+            app:layout_constraintTop_toBottomOf="@+id/imageView12"
+            tools:text="1338" />
+
+        <TextView
+            android:id="@+id/textDistrictNewRecover"
+            style="@style/TextCountDelta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_recovered"
+            app:layout_constraintEnd_toEndOf="@+id/imageView13"
+            app:layout_constraintStart_toStartOf="@+id/imageView13"
+            app:layout_constraintTop_toBottomOf="@+id/imageView13"
+            tools:text="1338" />
+
+        <TextView
+            android:id="@+id/textDistrictNewDeath"
+            style="@style/TextCountDelta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_death"
+            app:layout_constraintEnd_toEndOf="@+id/imageView14"
+            app:layout_constraintStart_toStartOf="@+id/imageView14"
+            app:layout_constraintTop_toBottomOf="@+id/imageView14"
+            tools:text="1338" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupStateNewConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="textDistrictNewConfirm,imageView12"
+            tools:layout_editor_absoluteX="@dimen/dimen_8"
+            tools:layout_editor_absoluteY="@dimen/dimen_8" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupStateNewRecover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="textDistrictNewRecover,imageView13"
+            tools:layout_editor_absoluteX="@dimen/dimen_8"
+            tools:layout_editor_absoluteY="@dimen/dimen_8" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/groupStateNewDeaths"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="textDistrictNewDeath,imageView14"
+            tools:layout_editor_absoluteX="@dimen/dimen_8"
+            tools:layout_editor_absoluteY="@dimen/dimen_8" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

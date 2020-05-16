@@ -14,17 +14,18 @@ import androidx.core.content.ContextCompat
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
 import dev.shreyaspatil.covid19notify.R
-import dev.shreyaspatil.covid19notify.model.ApiResponse
+import dev.shreyaspatil.covid19notify.model.StateResponse
 import dev.shreyaspatil.covid19notify.repository.CovidIndiaRepository
 import dev.shreyaspatil.covid19notify.ui.main.MainActivity
 import dev.shreyaspatil.covid19notify.utils.State
 import dev.shreyaspatil.covid19notify.utils.getPeriod
+import dev.shreyaspatil.covid19notify.utils.toDateFormat
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.toList
 import org.koin.core.KoinComponent
 import org.koin.core.get
-import java.text.SimpleDateFormat
 
+@FlowPreview
 @ExperimentalCoroutinesApi
 @InternalCoroutinesApi
 class NotificationWorker(
@@ -45,7 +46,7 @@ class NotificationWorker(
         val channelName = context.getString(R.string.default_notification_channel_name)
         val defaultSoundUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)
         val notificationBuilder = NotificationCompat.Builder(context, channelId)
-            .setColor(ContextCompat.getColor(context, R.color.dark_red))
+            .setColor(ContextCompat.getColor(context, R.color.color_confirmed))
             .setSmallIcon(R.drawable.ic_stat_notification_icon)
             .setContentTitle(context.getString(R.string.text_confirmed_cases, totalCount))
             .setContentText(context.getString(R.string.text_last_updated, time))
@@ -77,7 +78,7 @@ class NotificationWorker(
 
         val result = withContext(Dispatchers.Default) {
             repository.getData().toList()
-        }.filterIsInstance<State.Success<ApiResponse>>()
+        }.filterIsInstance<State.Success<StateResponse>>()
 
         if (result.isNullOrEmpty()) {
             Log.d(javaClass.simpleName, "Work Failed. Retrying...")
@@ -88,8 +89,7 @@ class NotificationWorker(
             showNotification(
                 totalDetails.confirmed,
                 getPeriod(
-                    SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
-                        .parse(totalDetails.lastUpdatedTime)
+                    totalDetails.lastUpdatedTime.toDateFormat()
                 )
             )
             Log.d(javaClass.simpleName, "Notification Displayed!")

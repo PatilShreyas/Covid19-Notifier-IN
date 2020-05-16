@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0E0E0E</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#F1FFAA00</color>
+    <color name="background">#000000</color>
+    <color name="colorSurface">#121212</color>
+
+
+    <!--Tint Colors for the Icons and Text-->
+    <color name="color_confirmed">#EF6C6C</color>
+    <color name="color_recovered">#6BC697</color>
+    <color name="color_active">#65D1D6</color>
+    <color name="color_death">#A0A0A0</color>
+
+    <!-- Text Colors-->
+    <color name="colorTextLastUpdated">#F1E5BC</color>
+    <color name="colorTextDefault">#DEFFFFFF</color>
+    <color name="color_toolbar_title">#F1FFAA00</color>
+
+    <color name="color_bulb_icon">#F1FFAA00</color>
+</resources>

@@ -2,16 +2,20 @@
 <resources>
     <color name="colorPrimary">#FFFFFF</color>
     <color name="colorPrimaryDark">#0E0E0E</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorAccent">#000</color>
+    <color name="background">#F1F1F1</color>
 
-    <color name="light_red">#FFCDD2</color>
-    <color name="light_green">#C8E6C9</color>
-    <color name="light_blue">#BBDEFB</color>
-    <color name="light_yellow">#FFECB3</color>
+    <!--Tint Colors for the Icons and Text-->
+    <color name="color_confirmed">#D32F2F</color>
+    <color name="color_recovered">#388E3C</color>
+    <color name="color_active">#1976D2</color>
+    <color name="color_death">#6D6D6D</color>
 
-    <color name="dark_red">#D32F2F</color>
-    <color name="dark_green">#388E3C</color>
-    <color name="dark_blue">#1976D2</color>
-    <color name="dark_yellow">#FF6F00</color>
+    <!-- Text Colors-->
+    <color name="colorSurface">#FFFFFF</color>
+    <color name="colorTextLastUpdated">#000</color>
+    <color name="colorTextDefault">#000</color>
+    <color name="color_toolbar_title">#000</color>
 
+    <color name="color_bulb_icon">#000</color>
 </resources>

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="art/icon.png" height="200"/>
+  <img src="app/src/main/ic_launcher-playstore.png" height="200"/>
 </p>
 
 # COVID19 Notifier - India 🇮🇳
@@ -16,17 +16,19 @@
 
 ***You can Install and test latest Covid19 Notifier app from below 👇***
 
-[![Covid19 App](https://img.shields.io/badge/Covid19Notifier-APK-blue.svg?style=for-the-badge&logo=android)](https://github.com/PatilShreyas/Covid19-Notifier-IN/releases/download/v2.1/app-debug.apk)
+[![Covid19 App](https://img.shields.io/badge/Covid19Notifier-APK-blue.svg?style=for-the-badge&logo=android)](https://github.com/PatilShreyas/Covid19-Notifier-IN/releases/download/v3.0/app-debug.apk)
 
 <table style="width:100%">
   <tr>
     <th>Main Screen (Total Report)</th>
     <th>Main Screen (State Report List)</th>
+    <th>Main Screen (Dark Mode 🌗)</th>
     <th>Notification in the System Tray</th>
   </tr>
   <tr>
-    <td><img src="art/home.jpg"/></td>
-    <td><img src="art/states.jpg"/></td> 
+    <td><img src="art/HomeScreen.jpg"/></td>
+    <td><img src="art/HomeScreen-States.jpg"/></td>
+    <td><img src="art/HomeScreen-Dark.jpg"/></td>
     <td><img src="art/notification.jpg"/></td>
   </tr>
 </table>
@@ -34,6 +36,8 @@
 ## About
 - It simply loads **Total COVID19 cases in India** from [API](https://github.com/covid19india/api). 
 - It notifies total cases of COVID19 in India after every 1 hours.
+- It shows the total cases of the District from every State.
+- Dark mode too 🌗.
 - It is offline capable (Using Cache) 😃.
 
 *It uses `PeriodicWorkManager` which is scheduled at the first run of an app. After that, `Worker` will execute after every one hour of interval and will show notification on Android's system tray.*
@@ -80,6 +84,10 @@ Thanks to [COVID19India.org](https://github.com/covid19india/api) for open-sourc
 If you need any help, you can connect with me.
 
 Visit:- [shreyaspatil.dev](https://shreyaspatil.dev)
+
+## Contributed By:
+- [Shreyas Patil](https://shreyaspatil.dev) (Maintainer)
+- [Rohan Singh](https://twitter.com/zaraki596) (Contributer)
 
 ## License
 ```

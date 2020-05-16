@@ -5,6 +5,10 @@ import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.TimeUnit
 
+/**
+ * Represents past time in text.
+ * For e.g. 1 Minutes ago, 1 hour 0 minutes ago.
+ */
 @SuppressLint("SimpleDateFormat")
 fun getPeriod(past: Date): String {
     val now = Date()
@@ -26,4 +30,13 @@ fun getPeriod(past: Date): String {
             SimpleDateFormat("dd/MM/yy, hh:mm a").format(past).toString()
         }
     }
+}
+
+/**
+ * Parses String to "dd/MM/yyyy HH:mm:ss" date and time format.
+ */
+@SuppressLint("SimpleDateFormat")
+fun String.toDateFormat(): Date {
+    return SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
+        .parse(this)
 }
