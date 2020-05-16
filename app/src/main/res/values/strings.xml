@@ -8,32 +8,6 @@
     <string name="text_confirmed_cases">Confirmed Cases : %s</string>
     <string name="text_last_updated">Last Updated : %s</string>
     <string name="default_notification_channel_name">Covid-19 India</string>
-
-    <!--Preferences Key-->
-    <string name="theme_pref_key">themePref</string>
-
-    <!--Preferences-->
-    <string name="pref_title_links">Links</string>
-    <string name="pref_title_about">About</string>
-
-    <string name="pref_title_theme_mode">Theme</string>
-    <string name="pref_subtitle_theme_mode">Select a dark or light theme.</string>
-
-    <string name="pref_title_github">GitHub</string>
-    <string name="pref_subtitle_github">Covid19-Notifier-IN ↗</string>
-
-    <string name="pref_title_contributor">Contributor</string>
-    <string name="pref_title_designer">Designer</string>
-    <string name="pref_subtitle_contributor_1">Shreyas Patil ↗</string>
-    <string name="pref_subtitle_contributor_2">Rohan Singh ↗</string>
-    <string name="pref_subtitle_designer">Jigyasa Varshney ↗</string>
-    <string name="pref_title_version">Version</string>
-    <string name="pref_subtitle_version">@string/app_version</string>
-
-    <!-- Links -->
-    <string name="link_repository" translatable="false">https://github.com/PatilShreyas/Covid19-Notifier-IN</string>
-    <string name="link_contributor_1" translatable="false">https://shreyaspatil.dev/</string>
-    <string name="link_contributor_2" translatable="false">https://github.com/Zaraki596/</string>
-    <string name="link_designer" translatable="false">https://instagram.com/jigyasa9742/</string>
+    <string name="menu_ui_mode">Dark Mode</string>
 
 </resources>
