@@ -12,6 +12,9 @@ data class Details(
     val deaths: String = "0",
     val state: String = "",
 
+    @Json(name = "statenotes")
+    val stateNotes: String = "",
+
     @Json(name = "deltaconfirmed")
     val deltaConfirmed: String = "0",
 
@@ -22,5 +25,6 @@ data class Details(
     val deltaDeaths: String = "0",
 
     @Json(name = "lastupdatedtime")
-    val lastUpdatedTime: String? = null
+    val lastUpdatedTime: String = ""
+
 ) : Parcelable
