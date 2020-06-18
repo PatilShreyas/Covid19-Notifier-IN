@@ -16,7 +16,7 @@
 
 ***You can Install and test latest Covid19 Notifier app from below 👇***
 
-[![Covid19 App](https://img.shields.io/github/v/release/patilshreyas/covid19-notifier-in?color=%23FFFF&label=Download%20APK&logo=android)](https://github.com/patilshreyas/covid19-notifier-in/releases/latest/download/app.apk)
+[![Covid19 App](https://img.shields.io/github/v/release/patilshreyas/covid19-notifier-in?color=%23FFFF&label=Download%20APK&logo=android)](https://github.com/patilshreyas/covid19-notifier-in/releases/latest/download/app-debug.apk)
 
 <table style="width:100%">
   <tr>
