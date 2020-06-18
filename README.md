@@ -6,17 +6,17 @@
 
 ![CI](https://github.com/PatilShreyas/Covid19-Notifier-IN/workflows/CI/badge.svg?branch=master)
 [![GitHub license](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+![GitHub downloads](https://img.shields.io/github/downloads/PatilShreyas/Covid19-Notifier-IN/total?color=blue&label=Downloads&logo=android&style=flat-square)
 ![Github Followers](https://img.shields.io/github/followers/PatilShreyas?label=Follow&style=social)
 ![GitHub stars](https://img.shields.io/github/stars/PatilShreyas/Covid19-Notifier-IN?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/PatilShreyas/Covid19-Notifier-IN?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/PatilShreyas/Covid19-Notifier-IN?style=social)
 ![Twitter Follow](https://img.shields.io/twitter/follow/imShreyasPatil?label=Follow&style=social)
 
 **Covid19 Notifier India** is a sample Android application 📱 built to demonstrate use of *Modern Android development* tools. Dedicated to all Android Developers with ❤️. 
 
 ***You can Install and test latest Covid19 Notifier app from below 👇***
 
-[![Covid19 App](https://img.shields.io/badge/Covid19Notifier-APK-blue.svg?style=for-the-badge&logo=android)](https://github.com/PatilShreyas/Covid19-Notifier-IN/releases/download/v3.0/app-debug.apk)
+[![Covid19 App](https://img.shields.io/github/v/release/patilshreyas/covid19-notifier-in?color=%23FFFF&label=Download%20APK&logo=android)](https://github.com/patilshreyas/covid19-notifier-in/releases/latest/download/app.apk)
 
 <table style="width:100%">
   <tr>
