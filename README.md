@@ -74,7 +74,7 @@
 
 
 ## Contribute
-If you want to contribute to this library, you're always welcome!
+If you want to contribute to this project, you're always welcome!
 See [Contributing Guidelines](CONTRIBUTING.md). 
 
 ## Credits
