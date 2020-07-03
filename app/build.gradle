@@ -55,7 +55,7 @@ dependencies {
     def lifecycle_version = '2.2.0'
     def material_design_version = '1.1.0'
     def retrofit_version = '2.7.2'
-    def moshi_version = '1.9.2'
+    def moshi_version = '1.9.3'
     def workmanager_version = '2.3.4'
     def koin_version = '2.1.5'
 
