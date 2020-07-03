@@ -57,7 +57,7 @@ dependencies {
     def retrofit_version = '2.7.2'
     def moshi_version = '1.9.2'
     def workmanager_version = '2.3.4'
-    def koin_version = '2.1.5'
+    def koin_version = '2.1.6'
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
