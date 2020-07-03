@@ -4,13 +4,13 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    compileSdkVersion 30
+    buildToolsVersion "30.0.0"
 
     defaultConfig {
         applicationId "dev.shreyaspatil.covid19notify"
         minSdkVersion 21
-        targetSdkVersion 29
+        targetSdkVersion 30
         versionCode 4
         versionName "3.0"
 
@@ -32,6 +32,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
     }
@@ -88,17 +89,16 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-moshi:$retrofit_version"
     kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshi_version"
 
+    // WorkManager
     implementation "androidx.work:work-runtime-ktx:$workmanager_version"
 
-    // Koin for Kotlin
+    // Koin DI
     implementation "org.koin:koin-core:$koin_version"
-    // Koin for Android
     implementation "org.koin:koin-android:$koin_version"
-    // Koin Android Scope features
     implementation "org.koin:koin-android-scope:$koin_version"
-    // Koin Android ViewModel features
     implementation "org.koin:koin-android-viewmodel:$koin_version"
 
+    // Testing
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
