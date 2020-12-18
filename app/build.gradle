@@ -53,7 +53,7 @@ dependencies {
     def swiperefreshlayout_version = '1.1.0'
     def recyclerview_version = "1.2.0-alpha03"
     def lifecycle_version = '2.2.0'
-    def material_design_version = '1.2.0'
+    def material_design_version = '1.2.1'
     def retrofit_version = '2.9.0'
     def moshi_version = '1.11.0'
     def workmanager_version = '2.4.0'
