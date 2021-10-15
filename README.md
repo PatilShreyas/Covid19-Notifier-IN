@@ -12,7 +12,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/PatilShreyas/Covid19-Notifier-IN?style=social)
 ![Twitter Follow](https://img.shields.io/twitter/follow/imShreyasPatil?label=Follow&style=social)
 
-**Covid19 Notifier India** is a sample Android application 📱 built to demonstrate use of *Modern Android development* tools. Dedicated to all Android Developers with ❤️. 
+**Covid19 Notifier India** is a sample Android application 📱 built to demonstrate use of *Modern Android development* tools. Dedicated to all Android Developers with ❤️.
 
 ***You can Install and test latest Covid19 Notifier app from below 👇***
 
@@ -34,7 +34,7 @@
 </table>
 
 ## About
-- It simply loads **Total COVID19 cases in India** from [API](https://github.com/covid19india/api). 
+- It simply loads **Total COVID19 cases in India** from [API](https://github.com/covid19india/api).
 - It notifies total cases of COVID19 in India after every 1 hours.
 - It shows the total cases of the District from every State.
 - Dark mode too 🌗.
@@ -48,7 +48,7 @@
 - [Flow](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/) - A cold asynchronous data stream that sequentially emits values and completes normally or with an exception.
 - [Android Architecture Components](https://developer.android.com/topic/libraries/architecture) - Collection of libraries that help you design robust, testable, and maintainable apps.
   - [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) - Data objects that notify views when the underlying database changes.
-  - [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - Stores UI-related data that isn't destroyed on UI changes. 
+  - [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - Stores UI-related data that isn't destroyed on UI changes.
   - [ViewBinding](https://developer.android.com/topic/libraries/view-binding) - Generates a binding class for each XML layout file present in that module and allows you to more easily write code that interacts with views.
 - [Koin](https://start.insert-koin.io/) - Dependency Injection Framework (Kotlin)
 - [Retrofit](https://square.github.io/retrofit/) - A type-safe HTTP client for Android and Java.
@@ -58,15 +58,15 @@
 - [Material Components for Android](https://github.com/material-components/material-components-android) - Modular and customizable Material Design UI components for Android
 
 # Package Structure
-    
+
     dev.shreyaspatil.covid19notify    # Root Package
     .
     ├── api                 # For API Service.
     ├── model               # Model classes
     ├── repository          # Repository to handle data from network using API.
-    ├── di                  # Dependency Injection     
+    ├── di                  # Dependency Injection
     |
-    ├── ui                  # Activity/View layer  
+    ├── ui                  # Activity/View layer
     │   └── main            # Main Screen Activity, ViewModel and RecyclerView Adapters.
     |
     ├── utils               # Utility Classes / Kotlin extensions
@@ -75,7 +75,7 @@
 
 ## Contribute
 If you want to contribute to this project, you're always welcome!
-See [Contributing Guidelines](CONTRIBUTING.md). 
+See [Contributing Guidelines](CONTRIBUTING.md).
 
 ## Credits
 Thanks to [COVID19India.org](https://github.com/covid19india/api) for open-source API.
@@ -87,9 +87,10 @@ Visit:- [shreyaspatil.dev](https://shreyaspatil.dev)
 
 ## Contributed By:
 - [Shreyas Patil](https://shreyaspatil.dev) (Maintainer)
-- [Rohan Singh](https://twitter.com/zaraki596) (Contributer)
+- [Rohan Singh](https://twitter.com/zaraki596) (Contributor)
 
 ## License
+
 ```
 MIT License
 
